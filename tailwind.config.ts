@@ -15,6 +15,7 @@ export default {
         serviceCarGradient:
           ' linear-gradient(0deg, #121212 0.03%, rgba(18, 18, 18, 0.00) 95.88%)',
         webBg: 'url(/webBg.webp)',
+        contactLines: 'url(/homeContactlines.webp)',
       },
       colors: {
         background: 'var(--background)',
