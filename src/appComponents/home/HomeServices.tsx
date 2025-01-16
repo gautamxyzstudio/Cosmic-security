@@ -1,15 +1,13 @@
 'use client';
 import Description from '@/components/textTypes/Description';
-import Heading, {
-  IHeadingTags,
-  IHeadingTypes,
-} from '@/components/textTypes/Heading';
+import { IHeadingTags, IHeadingTypes } from '@/components/textTypes/Heading';
 import React, { useRef } from 'react';
 import HomeServiceCard from './HomeServiceCard';
 import { servicesCardData } from '@/utils/mockdata';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
+import UnderlinedHeading from '@/components/underlinedHeading/UnderlinedHeading';
 
 const HomeServices = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
@@ -48,10 +46,10 @@ const HomeServices = () => {
   });
   return (
     <section ref={sectionRef} className="px-20 overflow-hidden relative">
-      <Heading
+      <UnderlinedHeading
         tagType={IHeadingTags.h2}
         type={IHeadingTypes.heading56}
-        customClasses="text-center"
+        customClasses="text-center "
         content="Our Services"
       />
       <Description

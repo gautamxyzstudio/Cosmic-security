@@ -10,11 +10,13 @@ const UnderlinedHeading: React.FC<IUnderlinedHeading> = ({
   ...headingProps
 }) => {
   return (
-    <div className=" inline-block flex-col items-start justify-start">
-      <Heading {...headingProps} />
-      {underlined && (
-        <div className=" ml-auto w-[124px] bg-primary mt-2  h-[2px] " />
-      )}
+    <div className={headingProps.customClasses}>
+      <div className={' inline-block flex-col items-start justify-start '}>
+        <Heading {...headingProps} />
+        {underlined && (
+          <div className=" ml-auto w-[124px] bg-primary mt-2  h-[2px] " />
+        )}
+      </div>
     </div>
   );
 };
