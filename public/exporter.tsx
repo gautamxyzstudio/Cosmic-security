@@ -3,7 +3,6 @@ import HOME_TOP_ONE from './homeBgTopOne.webp';
 import HOME_TOP_TWO from './homeBgTopTwo.webp';
 import HOME_TOP_THREE from './homeBgTopThree.webp';
 import HOME_BOTTOM_DIV from './subtract.png';
-import ABOUT_ILLUSTRATION from './about.svg';
 import CLEANER_ICON from './cleander_icon.svg';
 import EXPERIENCE_ICON from './experience_icon.svg';
 import LICENSE_ICON from './license_icon.svg';
@@ -16,6 +15,13 @@ import ARROW_RED from './arrowRed.svg';
 import HOME_CONTACT_LINE_BG from './homeContactlines.webp';
 import PHONE_ICON from './phone.svg';
 import MESSAGE_ICON from './message.svg';
+import MOBILE_GUARDING_ICON from './mobileGuarding.svg';
+import ONSITE_GUARDING_ICON from './onSiteGuarding.svg';
+import REMOTE_GUARDING_ICON from './remoteGuarding.svg';
+import ABOUT_ANIMATION from './aboutIllustration.json';
+import CORNER_LEFT from './cornerLeft.png';
+import CORNER_RIGHT from './cornerRight.png';
+
 export const icons = {
   LOGO,
   CLEANER_ICON,
@@ -25,6 +31,11 @@ export const icons = {
   ARROW_RED,
   PHONE_ICON,
   MESSAGE_ICON,
+  MOBILE_GUARDING_ICON,
+  ONSITE_GUARDING_ICON,
+  REMOTE_GUARDING_ICON,
+  CORNER_LEFT,
+  CORNER_RIGHT,
 };
 
 export const images = {
@@ -32,10 +43,13 @@ export const images = {
   HOME_TOP_TWO,
   HOME_TOP_THREE,
   HOME_BOTTOM_DIV,
-  ABOUT_ILLUSTRATION,
   SERVICE_CARD_ONE,
   SERVICE_CARD_TWO,
   SERVICE_CARD_THREE,
   SERVICE_CARD_FOUR,
   HOME_CONTACT_LINE_BG,
+};
+
+export const animations = {
+  ABOUT_ANIMATION,
 };

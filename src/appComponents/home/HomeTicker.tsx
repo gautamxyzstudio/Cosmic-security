@@ -17,7 +17,7 @@ const HomeTicker = () => {
   );
 
   return (
-    <div ref={divRef} className="my-[128px] flex  overflow-hidden">
+    <div ref={divRef} className="my-[128px]  overflow-hidden relative flex ">
       <HomeTickerCard
         name={'Happy clients'}
         icon={icons.PERSON_ICON}

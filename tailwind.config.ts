@@ -10,6 +10,12 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
+        guardingGradientOne:
+          'linear-gradient(180deg, #FFF -50%, #7D090D 136.89%)',
+        guardingGradientTwo:
+          'linear-gradient(180deg, #FFF -50%, #135A95 136.89%)',
+        guardingGradientThree:
+          'linear-gradient(180deg, #FFF -50%, #383838 136.89%)',
         buttonGradient:
           ' linear-gradient(180deg, #C1272D -13.16%, rgba(56, 56, 56, 0.00) 184.21%);',
         serviceCarGradient:

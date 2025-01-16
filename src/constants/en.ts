@@ -14,4 +14,5 @@ export const STRINGS = {
   request_information: 'Request information',
   request_info_dec:
     'Your security needs matter to us. Streamline the process by filling out our online contact form. Let’s secure your business together.',
+  callUsToday: 'Call us today',
 };

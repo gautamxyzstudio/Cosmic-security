@@ -63,3 +63,5 @@ export const servicesCardData: serviceCard[] = [
     cardImage: images.SERVICE_CARD_FOUR,
   },
 ];
+
+export const phoneNumber = '1-833-926-7642';

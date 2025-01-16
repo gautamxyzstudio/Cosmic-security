@@ -14,18 +14,23 @@ import Link from 'next/link';
 export interface IHomeServiceCardProps {
   cardImage: StaticImport | string;
   title: string;
+  customClass: string;
   description: string;
 }
 
 const HomeServiceCard: React.FC<IHomeServiceCardProps> = ({
   cardImage,
   title,
+  customClass,
   description,
 }) => {
   return (
     <Link
       href={'/'}
-      className="w-[296px] rounded-lg cursor-pointer group h-[380px] overflow-hidden relative"
+      className={
+        'w-[296px] rounded-lg cursor-pointer group h-[380px] overflow-hidden relative ' +
+        customClass
+      }
     >
       <div className="w-full h-full group-hover:hidden ">
         <Image

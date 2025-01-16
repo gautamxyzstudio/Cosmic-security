@@ -1,0 +1,14 @@
+.curvedBox {
+    --size: 100px; /* Adjust the size of the curve here */
+    height: 200px; /* Height of the main box */
+    width: 100%; /* Full width of the container */
+    background-color: black;
+    border: 1px solid red; /* Optional border */
+    background: radial-gradient(
+        var(--size) at 50% 0px,
+        transparent 99%,
+        red 101%
+      )
+      50% var(--size) / calc(4 * var(--size)) 100% no-repeat;
+  }
+  
