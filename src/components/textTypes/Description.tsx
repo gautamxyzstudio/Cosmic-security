@@ -11,6 +11,7 @@ export enum IDescriptionTypes {
   dec24 = 'dec24',
   dec20 = 'dec20',
   dec16 = 'dec16',
+  dec12= 'dec12',
 }
 
 const getDescriptionStyles = (type: IDescriptionTypes) => {
@@ -20,14 +21,16 @@ const getDescriptionStyles = (type: IDescriptionTypes) => {
     case IDescriptionTypes.dec20:
       return ` font-normal text-xl text-white `;
     case IDescriptionTypes.dec16:
-      return ` font-normal text-font-m text-white `;
+      return ` font-normal text-base text-white `;
+    case IDescriptionTypes.dec12:
+      return ` font-normal text-text-12  text-white `;
     default:
       return `text-grey font-normal w-full text-font-m md:text-xl xl:text-3xl `;
   }
 };
 
 const Description: React.FC<IDescriptionProps> = ({
-  customClasses,
+  customClasses= ' ',
   content,
   type = IDescriptionTypes.dec24,
   compRef,

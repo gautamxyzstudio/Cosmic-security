@@ -1,12 +1,10 @@
-import Description, {
-    IDescriptionTypes,
-  } from "@/components/TextTypes/description";
-  import Heading, { IHeadingTags, IHeadingTypes } from "@/components/TextTypes/Heading";
   import { STRINGS } from "@/constants/en";
   import { route } from "@/constants/route";
   import Link from "next/link";
   import React from "react";
-  import FollowUs from "./FollowUs";
+import Description, { IDescriptionTypes } from "../textTypes/Description";
+import Heading, { IHeadingTags, IHeadingTypes } from "../textTypes/Heading";
+ 
   
   const QuickLinks = () => {
     const quickLinks = [
@@ -41,7 +39,7 @@ import Description, {
                 <Description
                   content={link.title}
                   customClasses="!text-sm cursor-pointer"
-                
+                type={IDescriptionTypes.dec16}
                 />
               </Link>
             ))}

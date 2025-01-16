@@ -16,6 +16,17 @@ import ARROW_RED from './arrowRed.svg';
 import HOME_CONTACT_LINE_BG from './homeContactlines.webp';
 import PHONE_ICON from './phone.svg';
 import MESSAGE_ICON from './message.svg';
+import FACEBOOK_ICON from './facebook.svg';
+import LINKEDIN_ICON from './linkedin.svg';
+import INSTAGRAM_ICON from './instagram.svg';
+import TWITTER_ICON from './twitter.svg';
+import CEO_IMAGE from './CeoImage.webp';
+import SHERRY from './sherry.webp';
+import PARAMJIT from './paramjit.webp';
+import KUNAL from './kunal.webp';
+import AMRIT from './amrit.webp';
+import JASMINE from './jasmine.webp';
+
 export const icons = {
   LOGO,
   CLEANER_ICON,
@@ -25,6 +36,10 @@ export const icons = {
   ARROW_RED,
   PHONE_ICON,
   MESSAGE_ICON,
+  FACEBOOK_ICON,
+  LINKEDIN_ICON,
+  INSTAGRAM_ICON,
+  TWITTER_ICON,
 };
 
 export const images = {
@@ -38,4 +53,10 @@ export const images = {
   SERVICE_CARD_THREE,
   SERVICE_CARD_FOUR,
   HOME_CONTACT_LINE_BG,
+  CEO_IMAGE,
+  SHERRY,
+  PARAMJIT,
+  KUNAL,
+  AMRIT,
+  JASMINE,
 };
