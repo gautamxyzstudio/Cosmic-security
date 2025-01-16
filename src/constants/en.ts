@@ -4,6 +4,8 @@ export const STRINGS = {
   about: "About",
   contact: "Contact",
   meetOurTeam: "Meet our team",
+  con_us: 'Contact us',
+  meet_our : "Meet Our Team",
   register: "Register Today",
   homeHeading: "Our business is to protect yours",
   homeDec:

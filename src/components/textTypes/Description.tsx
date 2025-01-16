@@ -21,7 +21,7 @@ const getDescriptionStyles = (type: IDescriptionTypes) => {
     case IDescriptionTypes.dec20:
       return ` font-normal text-xl text-white `;
     case IDescriptionTypes.dec16:
-      return ` font-normal text-base text-white `;
+      return ` font-normal text-text-12 md:text-base  text-white `;
     case IDescriptionTypes.dec12:
       return ` font-normal text-text-12  text-white `;
     default:

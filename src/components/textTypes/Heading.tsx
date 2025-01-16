@@ -41,7 +41,7 @@ const getHeadingStyles = (type: IHeadingTypes) => {
     case IHeadingTypes.heading56:
       return `xl:text-heading-56 `;
     case IHeadingTypes.heading20:
-      return `xl:text-xl`;
+      return `md:text-xl text-sm`;
     default:
       return `xl:text-heading-80 `;
   }
