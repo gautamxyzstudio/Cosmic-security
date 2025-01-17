@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${latoMono.variable} bg-background antialiased`}
+        className={` ${latoMono.className} bg-background antialiased`}
       >
         <Header />
         {children}

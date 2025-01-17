@@ -33,9 +33,14 @@ const QuickLinks = () => {
       title: STRINGS.con_us,
       href: route.contact,
     },
+    {
+      id: 6,
+      title: STRINGS.privacy,
+      href: route.privacy_policy,
+    },
   ];
   return (
-    <div className="flex flex-col items-start justify-between gap-y-4 lg:gap-y-6 w-fit">
+    <div className="flex flex-col items-start gap-y-4 lg:gap-y-6">
       <div className="flex flex-col gap-y-2 lg:gap-y-4">
         <Heading
           tagType={IHeadingTags.h4}

@@ -26,6 +26,7 @@ export default {
         linearStrokeTernary: "var(--linearStrokeTernary)",
         black: "var(--black)",
         borderStroke: "var(--borderStroke)",
+        stroke: "var(--stroke)",
         lightGrey: "var(--lightGrey)",
         lightDisabled: "var(--lightDisabled)",
         ceoMessageBg: "var(--ceoMessageBg)",

@@ -3,6 +3,7 @@ export const STRINGS = {
   services: "Services",
   about: "About",
   contact: "Contact",
+  privacy: "Privacy Policy",
   meetOurTeam: "Meet our team",
   con_us: 'Contact us',
   meet_our : "Meet Our Team",
@@ -22,5 +23,6 @@ export const STRINGS = {
   security: "Security",
   training: "Training",
   team_dec: 'Amet facilisis viverra sapien odio senectus et in nunc eget volutpat adipiscing',
-  ceo_message: `"I still remember the countless nights I spent struggling to make ends meet, my disability seemingly a constant barrier to find employment. The rejections, the doubts, the feelings of worthlessness - it was a never-ending cycle of pain. But I refused to give up. I knew I had so much to offer, so much potential to make a difference and then, it hit me - why not create opportunities for others too?"`
+  ceo_message: `"I still remember the countless nights I spent struggling to make ends meet, my disability seemingly a constant barrier to find employment. The rejections, the doubts, the feelings of worthlessness - it was a never-ending cycle of pain. But I refused to give up. I knew I had so much to offer, so much potential to make a difference and then, it hit me - why not create opportunities for others too?"`,
+  footer_desc: "Cosmic Security, established in 2018 inBritish Columbia, Canada is a security service provider with a strong presence in British Columbia specializing in Static Security Guards, Special Events Security, CCTV surveillance, Access Control, Concierge Services, AST Guards specialized with hand-cuffs. We excel in managing diverse security needs."
 };

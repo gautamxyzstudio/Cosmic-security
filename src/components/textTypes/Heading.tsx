@@ -28,20 +28,23 @@ export enum IHeadingTypes {
   heading40 = "heading40",
   heading24 = "heading24",
   heading20 = "heading20",
+  heading16 = "heading16",
 }
 
 const getHeadingStyles = (type: IHeadingTypes) => {
   switch (type) {
     case IHeadingTypes.heading80:
-      return `lg:text-heading-80  `;
+      return `lg:text-heading-80 text-heading-40  `;
+    case IHeadingTypes.heading56:
+      return `lg:text-heading-56 text-2xl `;
     case IHeadingTypes.heading40:
-      return `lg:text-heading-40 `;
+      return `lg:text-heading-40 text-2xl `;
     case IHeadingTypes.heading24:
       return ` lg:text-2xl `;
-    case IHeadingTypes.heading56:
-      return `lg:text-heading-56 `;
     case IHeadingTypes.heading20:
       return `lg:text-xl text-sm`;
+    case IHeadingTypes.heading16:
+      return `text-text-12 lg:text-base  `;
     default:
       return `lg:text-heading-80 `;
   }
@@ -64,10 +67,7 @@ const Heading: React.FC<IHeadingProps> = ({
     <Tag
       ref={compRef}
       className={
-        headingStyles +
-        textColor +
-        customClasses +
-        ` ${heeboSans.variable}`
+        headingStyles + textColor + customClasses + ` ${heeboSans.className}`
       }
     >
       {content}

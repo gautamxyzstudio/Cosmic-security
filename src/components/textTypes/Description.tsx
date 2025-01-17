@@ -17,15 +17,15 @@ export enum IDescriptionTypes {
 const getDescriptionStyles = (type: IDescriptionTypes) => {
   switch (type) {
     case IDescriptionTypes.dec24:
-      return ` font-normal text-2xl text-white `;
+      return ` font-normal lg:text-2xl text-sm text-white `;
     case IDescriptionTypes.dec20:
-      return ` font-normal text-xl text-white `;
+      return ` font-normal lg:text-xl text-sm text-white `;
     case IDescriptionTypes.dec16:
       return ` font-normal text-text-12 lg:text-base  text-white `;
     case IDescriptionTypes.dec12_static:
       return ` font-normal text-text-12  text-white `;
     default:
-      return `text-grey font-normal w-full  text-xl lg:text-3xl `;
+      return ` font-normal w-full  text-xl lg:text-3xl `;
   }
 };
 

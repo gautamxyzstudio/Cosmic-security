@@ -1,4 +1,4 @@
-import LOGO from './logo.svg';
+import LOGO from './logo.webp';
 import HOME_TOP_ONE from './homeBgTopOne.webp';
 import HOME_TOP_TWO from './homeBgTopTwo.webp';
 import HOME_TOP_THREE from './homeBgTopThree.webp';
@@ -26,9 +26,11 @@ import PARAMJIT from './paramjit.webp';
 import KUNAL from './kunal.webp';
 import AMRIT from './amrit.webp';
 import JASMINE from './jasmine.webp';
+import HUMBUG from './Hamburger.svg'
+import F_CALL from './Call_Footer.svg';
+import F_EMAIL from './Email_Footer.svg';
 
 export const icons = {
-  LOGO,
   CLEANER_ICON,
   EXPERIENCE_ICON,
   LICENSE_ICON,
@@ -40,9 +42,13 @@ export const icons = {
   LINKEDIN_ICON,
   INSTAGRAM_ICON,
   TWITTER_ICON,
+  HUMBUG,
+  F_CALL,
+  F_EMAIL,
 };
 
 export const images = {
+  LOGO,
   HOME_TOP_ONE,
   HOME_TOP_TWO,
   HOME_TOP_THREE,

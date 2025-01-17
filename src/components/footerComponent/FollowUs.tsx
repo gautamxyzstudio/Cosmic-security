@@ -5,7 +5,7 @@ import Heading, { IHeadingTags, IHeadingTypes } from "@/components/textTypes/Hea
 
 const FollowUs = () => {
   return (
-    <div className="flex flex-col gap-y-2 lg:gap-y-4">
+    <div className="flex flex-col gap-y-2 w-[116px] lg:gap-y-4 lg:w-40">
       <Heading
         tagType={IHeadingTags.h4}
         content="Follow us"
