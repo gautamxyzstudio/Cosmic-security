@@ -1,11 +1,11 @@
-'use client';
-import Image from 'next/image';
-import React from 'react';
-import { icons } from '../../../public/exporter';
-import { STRINGS } from '@/constants/en';
-import { route } from '@/constants/route';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+"use client";
+import Image from "next/image";
+import React from "react";
+import { icons, images } from "../../../public/exporter";
+import { STRINGS } from "@/constants/en";
+import { route } from "@/constants/route";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const pathName = usePathname();
@@ -37,15 +37,19 @@ const Header = () => {
     },
   ];
   return (
-    <header className="pt-4 w-full max-w-screen-2xl z-50 left-1/2 transform -translate-x-1/2 fixed mx-auto flex flex-row justify-between items-center px-20">
-      <Image alt="" src={icons.LOGO} />
-      <nav className="flex flex-row gap-x-14">
+    <header className="pt-4 w-full max-w-screen-2xl z-50 left-1/2 transform -translate-x-1/2 fixed mx-auto flex flex-row justify-between items-center px-6 lg:px-20 ">
+      <Image
+        alt="Cosmic Security"
+        src={images.LOGO}
+        className="w-20 h-6 lg:w-[144px] lg:h-11"
+      />
+      <nav className="hidden lg:flex flex-row gap-x-14">
         {navRoutes.map((route) => (
           <Link
             className={
               route.link === pathName
-                ? 'text-primary text-2xl'
-                : 'text-white text-2xl hover:text-primary'
+                ? "text-primary text-2xl"
+                : "text-white text-2xl hover:text-primary"
             }
             key={route.id}
             href={route.link}
@@ -54,6 +58,7 @@ const Header = () => {
           </Link>
         ))}
       </nav>
+      <Image alt="Hamburger" src={icons.HUMBUG} className="lg:hidden flex" />
     </header>
   );
 };

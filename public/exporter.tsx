@@ -1,4 +1,4 @@
-import LOGO from './logo.svg';
+import LOGO from './logo.webp';
 import HOME_TOP_ONE from './homeBgTopOne.webp';
 import HOME_TOP_TWO from './homeBgTopTwo.webp';
 import HOME_TOP_THREE from './homeBgTopThree.webp';
@@ -28,9 +28,21 @@ import OFFICER_ICON from './officer.svg';
 import VAN_ICON from './van.svg';
 import ADV_TECH_ICON from './advTech.svg';
 import CALL_SECONDARY_ICON from './callSecondary.svg';
+import FACEBOOK_ICON from './facebook.svg';
+import LINKEDIN_ICON from './linkedin.svg';
+import INSTAGRAM_ICON from './instagram.svg';
+import TWITTER_ICON from './twitter.svg';
+import CEO_IMAGE from './CeoImage.webp';
+import SHERRY from './sherry.webp';
+import PARAMJIT from './paramjit.webp';
+import KUNAL from './kunal.webp';
+import AMRIT from './amrit.webp';
+import JASMINE from './jasmine.webp';
+import HUMBUG from './Hamburger.svg'
+import F_CALL from './Call_Footer.svg';
+import F_EMAIL from './Email_Footer.svg';
 
 export const icons = {
-  LOGO,
   CLEANER_ICON,
   EXPERIENCE_ICON,
   LICENSE_ICON,
@@ -48,9 +60,17 @@ export const icons = {
   VAN_ICON,
   ADV_TECH_ICON,
   CALL_SECONDARY_ICON,
+  FACEBOOK_ICON,
+  LINKEDIN_ICON,
+  INSTAGRAM_ICON,
+  TWITTER_ICON,
+  HUMBUG,
+  F_CALL,
+  F_EMAIL,
 };
 
 export const images = {
+  LOGO,
   HOME_TOP_ONE,
   HOME_TOP_TWO,
   HOME_TOP_THREE,
@@ -62,8 +82,15 @@ export const images = {
   HOME_CONTACT_LINE_BG,
   CHOOSE_OUTER,
   CHOOSE_INNER,
+  CEO_IMAGE,
+  SHERRY,
+  PARAMJIT,
+  KUNAL,
+  AMRIT,
+  JASMINE,
 };
 
 export const animations = {
   ABOUT_ANIMATION,
+ 
 };

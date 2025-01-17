@@ -29,7 +29,7 @@ const HomeTickerCard: React.FC<IHomeTickerCardProps> = ({
       <Image alt="person" src={icon} />
       <div>
         <Heading
-          tagType={IHeadingTags.h3}
+          tagType={IHeadingTags.h4}
           content={`${count}+`}
           type={IHeadingTypes.heading40}
         />
