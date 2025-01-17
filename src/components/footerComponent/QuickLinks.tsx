@@ -35,14 +35,14 @@ const QuickLinks = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-start justify-between gap-y-4 md:gap-y-6 w-fit">
-      <div className="flex flex-col gap-y-2 md:gap-y-4">
+    <div className="flex flex-col items-start justify-between gap-y-4 lg:gap-y-6 w-fit">
+      <div className="flex flex-col gap-y-2 lg:gap-y-4">
         <Heading
           tagType={IHeadingTags.h4}
           content="Quick Links"
           type={IHeadingTypes.heading20}
         />
-        <div className="flex flex-col gap-y-1 md:gap-y-2 ">
+        <div className="flex flex-col gap-y-1 lg:gap-y-2 ">
           {quickLinks.map((link) => (
             <Link key={link.id} href={link.href}>
               <Description

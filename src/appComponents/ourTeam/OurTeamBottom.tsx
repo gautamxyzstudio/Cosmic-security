@@ -51,7 +51,7 @@ const OurTeamBottom = () => {
                 />
                 <Description
                   content={item.role}
-                  type={IDescriptionTypes.dec12}
+                  type={IDescriptionTypes.dec12_static}
                 />
               </div>
             </div>
