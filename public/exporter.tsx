@@ -21,6 +21,13 @@ import REMOTE_GUARDING_ICON from './remoteGuarding.svg';
 import ABOUT_ANIMATION from './aboutIllustration.json';
 import CORNER_LEFT from './cornerLeft.png';
 import CORNER_RIGHT from './cornerRight.png';
+import CHOOSE_OUTER from './chooseOuter.svg';
+import CHOOSE_INNER from './chooseInner.svg';
+import CLOCK_ICON from './clock.svg';
+import OFFICER_ICON from './officer.svg';
+import VAN_ICON from './van.svg';
+import ADV_TECH_ICON from './advTech.svg';
+import CALL_SECONDARY_ICON from './callSecondary.svg';
 
 export const icons = {
   LOGO,
@@ -36,6 +43,11 @@ export const icons = {
   REMOTE_GUARDING_ICON,
   CORNER_LEFT,
   CORNER_RIGHT,
+  CLOCK_ICON,
+  OFFICER_ICON,
+  VAN_ICON,
+  ADV_TECH_ICON,
+  CALL_SECONDARY_ICON,
 };
 
 export const images = {
@@ -48,6 +60,8 @@ export const images = {
   SERVICE_CARD_THREE,
   SERVICE_CARD_FOUR,
   HOME_CONTACT_LINE_BG,
+  CHOOSE_OUTER,
+  CHOOSE_INNER,
 };
 
 export const animations = {
