@@ -37,6 +37,7 @@ export default {
         lightGrey: "var(--lightGrey)",
         lightDisabled: "var(--lightDisabled)",
         ceoMessageBg: "var(--ceoMessageBg)",
+        overlayTeamBg: "var(--overlayTeamBg)",
       },
       fontSize: {
         "heading-80": [

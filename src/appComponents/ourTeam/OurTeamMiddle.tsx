@@ -10,13 +10,14 @@ import Heading, {
 
 const OurTeamMiddle = () => {
   return (
-    <section className="px-20 w-full h-full flex items-center">
+    <section className="px-6 lg:px-20 w-full h-full flex flex-col gap-y-6 lg:flex-row items-center">
       <Image
         alt="Sherry Sidhu, CEO"
         src={images.CEO_IMAGE}
         className="rounded-xl object-cover lg:w-[961px] lg:h-[660px] relative top-0 left-0"
       />
-      <div className="absolute p-8 right-20 rounded-xl bg-ceoMessageBg lg:w-[611px] h-auto">
+      {/* Desktop view */}
+      <div className=" hidden lg:block absolute p-8 right-20 rounded-xl bg-ceoMessageBg lg:w-[611px] h-auto">
         <div className="flex flex-col gap-y-6">
           <div className="flex flex-col items-end gap-y-2 w-fit">
             <Heading
@@ -24,7 +25,7 @@ const OurTeamMiddle = () => {
               type={IHeadingTypes.heading56}
               content="CEO Message"
             />
-            <div className="bg-primary h-0.5 w-[124px] mt-2" />
+            <div className="bg-primary h-0.5 w-[124px]" />
           </div>
           <Description content={STRINGS.ceo_message} />
           <Description
@@ -33,6 +34,26 @@ const OurTeamMiddle = () => {
           />
         </div>
       </div>
+      {/* end mobile view */}
+      {/* Mobile view */}
+      <div className="flex flex-col gap-y-2 lg:hidden">
+        <div className="flex flex-col items-center gap-y-3">
+          <div className="flex flex-col items-end gap-y-1 w-fit">
+            <Heading
+              tagType={IHeadingTags.h2}
+              type={IHeadingTypes.heading56}
+              content="CEO Message"
+            />
+            <div className="bg-primary h-0.5 w-12 " />
+          </div>
+          <Description content={STRINGS.ceo_message} />
+        </div>
+        <Description
+          content="Sherry Sidhu, CEO"
+          customClasses="!text-primary text-start"
+        />
+      </div>
+      {/* end mobile view */}
     </section>
   );
 };
