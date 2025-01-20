@@ -17,7 +17,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
 const OurTeamBottom = () => {
-  return (
+   return (
     <section className="px-6 lg:px-20 w-full h-full flex flex-col items-center lg:items-start gap-y-6 lg:gap-y-14">
       <div className="flex flex-col items-end gap-y-1 lg:gap-y-2 w-fit">
         <Heading
@@ -60,7 +60,7 @@ const OurTeamBottom = () => {
           loop={true}
           autoplay
           slidesPerView={2}
-          spaceBetween={12}
+          spaceBetween={50}
           pagination={{
             clickable: true,
           }}

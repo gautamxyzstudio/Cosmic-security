@@ -60,7 +60,6 @@ body::-webkit-scrollbar {
 }
 
 .swiper-wrapper {
-  gap: 12px;
   width: min-content !important;
   padding-bottom: 40px !important;
 }
@@ -68,7 +67,7 @@ body::-webkit-scrollbar {
 .mySwiper-pagination .swiper-pagination-bullet {
   width: 6px;
   height: 6px;
-  border-radius:40px;
+  border-radius: 40px;
   background-color: var(--black);
   opacity: 1;
 }
