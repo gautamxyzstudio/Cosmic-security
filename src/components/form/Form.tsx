@@ -22,8 +22,8 @@ const Form = () => {
     setFormData({ ...formData, [key]: value });
   };
   return (
-    <div className="bg-black    justify-between h-full  pt-12 flex flex-col  w-full ">
-      <div className="px-12 flex flex-col  gap-y-12 ">
+    <div className="bg-black z-[4]  justify-between h-full pt-6  xl:pt-12 flex flex-col  w-full ">
+      <div className="px-6 xl:px-12   flex flex-col gap-y-6  xl:gap-y-12 ">
         <TextInput
           value={formData.name}
           onChangeText={(e) => updateFormData('name', e.target.value)}
@@ -45,7 +45,10 @@ const Form = () => {
           placeHolder={'Message'}
         />
       </div>
-      <Button customStyles="!py-6 !rounded-none " title="Send us Quote" />
+      <Button
+        customStyles="py-3 xl:!py-6  !rounded-none "
+        title="Send us Quote"
+      />
     </div>
   );
 };

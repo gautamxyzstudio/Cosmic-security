@@ -9,7 +9,7 @@ const HomeAboutUsLottie = () => {
     <div className="flex flex-col w-full justify-center items-center">
       <Lottie
         animationData={animationData}
-        className="w-[365px] h-[365px]"
+        className="w-[213px] h-[213px]  xl:w-[365px] xl:h-[365px]"
         loop={true}
       />
     </div>

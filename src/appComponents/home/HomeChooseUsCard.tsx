@@ -24,9 +24,12 @@ const HomeChooseUsCard: React.FC<IHomeChooseUsCardProps> = ({
 }) => {
   return (
     <div
-      className={'bg-black min-h-[324px] w-[316px] py-6 px-4 ' + customClass}
+      className={
+        'bg-black min-h-[256px]  xl:min-h-[324px]  w-[316px] py-6 px-4 ' +
+        customClass
+      }
     >
-      <Image src={icon} alt="clock" />
+      <Image className="mb-3 w-8 h-8 xl:w-12 xl:h-12 " src={icon} alt="clock" />
       <Heading
         tagType={IHeadingTags.h3}
         type={IHeadingTypes.heading24}

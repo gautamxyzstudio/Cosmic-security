@@ -14,7 +14,7 @@ const UnderlinedHeading: React.FC<IUnderlinedHeading> = ({
       <div className={' inline-block flex-col items-start justify-start '}>
         <Heading {...headingProps} />
         {underlined && (
-          <div className=" ml-auto w-[124px] bg-primary mt-2  h-[2px] " />
+          <div className=" ml-auto w-12  xl:w-[124px] bg-primary xl:mt-2 mt-1  h-[2px] " />
         )}
       </div>
     </div>

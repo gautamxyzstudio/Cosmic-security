@@ -125,7 +125,7 @@ const HomeWhyChooseUs = () => {
 
 export default HomeWhyChooseUs;
 
-const ChooseUsOne: IHomeChooseUsCardProps[] = [
+export const ChooseUsOne: IHomeChooseUsCardProps[] = [
   {
     icon: icons.CLOCK_ICON,
     title: 'Perfection anytime',
@@ -142,7 +142,7 @@ const ChooseUsOne: IHomeChooseUsCardProps[] = [
     decs: 'At Cosmic Security, we integrate cutting-edge technology for your safety. Our advanced systems include scanning checkpoints, building access control, CCTV, and metal detectors, ensuring comprehensive security solutions',
   },
 ];
-const ChooseUsTwo: IHomeChooseUsCardProps[] = [
+export const ChooseUsTwo: IHomeChooseUsCardProps[] = [
   {
     icon: icons.PHONE_ICON,
     title: '24/7 Support',

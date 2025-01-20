@@ -18,7 +18,7 @@ import { phoneNumber } from '@/utils/mockdata';
 import HomeGuardingView from './HomeGuardingView';
 const HomeTop = () => {
   return (
-    <div className="mx-10 relative  rounded-b-[80px] max-h-[863px] overflow-hidden top-0 left-0">
+    <div className="xl:mx-10   w-full relative rounded-b-[40px]  xl:rounded-b-[80px]  h-[436px] xl:h-full  xl:max-h-[863px] overflow-hidden top-0 left-0">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -30,36 +30,40 @@ const HomeTop = () => {
         pagination={{
           clickable: true,
         }}
-        className="relative top-0 left-0"
+        className="relative w-full h-full  bg-red top-0 left-0"
         navigation={true}
         modules={[Autoplay]}
       >
         <SwiperSlide>
-          <div className="w-full">
-            <Image alt="homeTopOne" src={images.HOME_TOP_ONE} />
+          <div className="w-full h-full ">
+            <Image
+              className="w-full h-full object-cover xl:object-contain"
+              alt="homeTopOne"
+              src={images.HOME_TOP_ONE}
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full">
+          <div className="w-full  h-full ">
             <Image
               alt="homeTopOne"
-              className="w-full h-full"
+              className="w-full h-full object-cover xl:object-contain"
               src={images.HOME_TOP_TWO}
             />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="w-full">
+          <div className="w-full  h-full">
             <Image
               alt="homeTopOne"
-              className="w-full h-full"
+              className="w-full h-full object-cover xl:object-contain"
               src={images.HOME_TOP_THREE}
             />
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="absolute pt-40 z-[1] bg-[#12121299] top-0 flex-row  flex left-0 h-full w-full">
-        <div className="w-[60%]  pl-20">
+      <div className="absolute pt-[143px]  xl:pt-40 z-[1] bg-[#12121299] top-0 flex-row  flex left-0 h-full w-full">
+        <div className="w-full xl:w-[60%] px-6  xl:pl-20">
           <Description
             content="SERVING IN CANADA SINCE 2018"
             customClasses="!text-primary"
@@ -67,18 +71,19 @@ const HomeTop = () => {
           <Heading
             tagType={IHeadingTags.h1}
             content={STRINGS.homeHeading}
-            customClasses="mt-4"
+            customClasses="mt-2  xl:mt-4"
             type={IHeadingTypes.heading80}
           />
 
           <Description
-            customClasses="mt-6"
+            customClasses="mt-3  xl:mt-6"
             type={IDescriptionTypes.dec24}
             content={STRINGS.homeDec}
           />
-          <div className="mt-6 gap-x-4 items-center  flex flex-row  ">
+          <div className="mt-3  xl:mt-6 gap-x-2 xl:gap-x-4 items-center  flex flex-row  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
+              className="w-8 h-8 xl:w-14 xl:h-14"
               width="56"
               height="56"
               viewBox="0 0 56 56"
@@ -103,20 +108,20 @@ const HomeTop = () => {
             </div>
           </div>
         </div>
-        <div className="h-full  w-[40%]">
+        <div className="h-full hidden xl:inline-block  w-[40%]">
           <HomeGuardingView />
         </div>
-        <div className="absolute  bottom-[20px] left-[46.3%]">
+        <div className="absolute hidden xl:inline-block   bottom-[20px] left-[46.3%]">
           <HomeTopCircularDiv />
         </div>
         <Image
           alt=""
-          className="absolute  w-[140px] bottom-[82px] left-0 h-[140px object-contain "
+          className="absolute hidden xl:inline-block   w-[140px] bottom-[82px] left-0 h-[140px object-contain "
           src={icons.CORNER_LEFT}
         />
         <svg
           pointerEvents={'none'}
-          className="absolute    bottom-[82px] z-30 right-0  "
+          className="absolute hidden xl:inline-block     bottom-[82px] z-30 right-0  "
           viewBox="0 0 146 125"
           fill="none"
           width="146"
@@ -127,7 +132,7 @@ const HomeTop = () => {
             fill="#282828"
           />
         </svg>
-        <div className="h-[84px] w-full bottom-0 absolute   z-10">
+        <div className="h-[84px] hidden xl:inline-block   w-full bottom-0 absolute   z-10">
           <Image
             className="w-full h-[84px]"
             src={images.HOME_BOTTOM_DIV}

@@ -1,6 +1,9 @@
 'use client';
 import Description from '@/components/textTypes/Description';
-import { IHeadingTags, IHeadingTypes } from '@/components/textTypes/Heading';
+import Heading, {
+  IHeadingTags,
+  IHeadingTypes,
+} from '@/components/textTypes/Heading';
 import React, { useRef } from 'react';
 import HomeServiceCard from './HomeServiceCard';
 import { servicesCardData } from '@/utils/mockdata';
@@ -8,6 +11,9 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import UnderlinedHeading from '@/components/underlinedHeading/UnderlinedHeading';
+import Image from 'next/image';
+import Link from 'next/link';
+import { icons } from '../../../public/exporter';
 
 const HomeServices = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
@@ -45,7 +51,10 @@ const HomeServices = () => {
     });
   });
   return (
-    <section ref={sectionRef} className="px-20 overflow-hidden relative">
+    <section
+      ref={sectionRef}
+      className="px-6 xl:px-20 overflow-hidden relative"
+    >
       <UnderlinedHeading
         tagType={IHeadingTags.h2}
         type={IHeadingTypes.heading56}
@@ -53,12 +62,12 @@ const HomeServices = () => {
         content="Our Services"
       />
       <Description
-        customClasses="mt-10 text-center px-[256px]"
+        customClasses="xl:mt-10 mt-4 text-center  xl:px-[256px]"
         content="Cosmic Security specializes in tailored security solutions across eight major areas, ensuring comprehensive protection for diverse business needs."
       />
       <div
         ref={divRef}
-        className="flex  flex-row gap-x-8 mt-14 gap-y-12 justify-center  items-center flex-wrap"
+        className="xl:flex hidden  flex-row gap-x-8 mt-14 gap-y-12 justify-center  items-center flex-wrap"
       >
         {servicesCardData.map((item) => (
           <HomeServiceCard
@@ -68,6 +77,29 @@ const HomeServices = () => {
             description={item.description}
             customClass={'serviceCard'}
           />
+        ))}
+      </div>
+      <div className="flex xl:hidden mt-8 w-full h-full justify-center  gap-3 flex-wrap flex-row">
+        {servicesCardData.map((item) => (
+          <Link
+            href="/"
+            className="rounded-lg overflow-hidden relative top-0 left-0 w-[48%] h-[224px]"
+            key={item.id}
+          >
+            <Image
+              alt=""
+              className="w-full h-full object-cover"
+              src={item.cardImage}
+            />
+            <div className="bg-serviceCarGradient flex flex-row items-end justify-between px-2 py-4  w-full absolute z-[1]  bottom-0 h-[56px]">
+              <Heading content={item.title} type={IHeadingTypes.heading24} />
+              <Image
+                className="w-6 h-6"
+                alt="arrow Red"
+                src={icons.ARROW_RED}
+              />
+            </div>
+          </Link>
         ))}
       </div>
     </section>
