@@ -1,8 +1,5 @@
 "use client";
-import Heading, {
-  IHeadingTags,
-  IHeadingTypes,
-} from "@/components/textTypes/Heading";
+import { IHeadingTags, IHeadingTypes } from "@/components/textTypes/Heading";
 import Image from "next/image";
 import React, { useRef } from "react";
 import { images } from "../../../public/exporter";
@@ -19,6 +16,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import UnderlinedHeading from "@/components/underlinedHeading/UnderlinedHeading";
 
 const OurTeamBottom = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -65,16 +63,12 @@ const OurTeamBottom = () => {
       ref={mainSectionRef}
       className="px-6 lg:px-20 w-full h-full flex flex-col items-center lg:items-start gap-y-6 lg:gap-y-14 overflow-hidden"
     >
-      <div
-        ref={headingRef}
-        className="flex flex-col items-end gap-y-1 lg:gap-y-2 w-fit"
-      >
-        <Heading
+      <div ref={headingRef}>
+        <UnderlinedHeading
           tagType={IHeadingTags.h2}
           type={IHeadingTypes.heading56}
           content="Cosmic Beings"
         />
-        <div className="bg-primary h-0.5 w-12 lg:w-[128px]" />
       </div>
       {/* Desktop view */}
       <div
@@ -118,8 +112,8 @@ const OurTeamBottom = () => {
           }}
           breakpoints={{
             768: {
-              slidesPerView: 3,
-              spaceBetween: 20,
+              slidesPerView: 4,
+              spaceBetween: 30,
             },
           }}
           className="mySwiper-pagination"
