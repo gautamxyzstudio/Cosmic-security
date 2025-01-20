@@ -4,7 +4,7 @@ import Heading, {
   IHeadingTypes,
 } from "@/components/textTypes/Heading";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { images } from "../../../public/exporter";
 import Description, {
   IDescriptionTypes,
@@ -15,11 +15,60 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+// import gsap
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const OurTeamBottom = () => {
-   return (
-    <section className="px-6 lg:px-20 w-full h-full flex flex-col items-center lg:items-start gap-y-6 lg:gap-y-14">
-      <div className="flex flex-col items-end gap-y-1 lg:gap-y-2 w-fit">
+  gsap.registerPlugin(ScrollTrigger);
+  const mainSectionRef = useRef<HTMLDivElement | null>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
+  const teamDetailDivRef = useRef<HTMLDivElement | null>(null);
+  useGSAP(() => {
+    const mq = gsap.matchMedia();
+    mq.add("(min-width: 1280px)", () => {
+      const t1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: mainSectionRef.current,
+          start: "top 100%",
+          end: "70% 90%",
+        },
+      });
+      t1.add("startT1")
+        .from(
+          headingRef.current,
+          {
+            xPercent: -100,
+            ease: "power1.inOut",
+            duration: 1.5,
+            opacity: 0,
+          },
+          "startT1"
+        )
+
+        .from(
+          teamDetailDivRef.current,
+          {
+            xPercent: 100,
+            ease: "power1.inOut",
+            duration: 1.4,
+            opacity: 0,
+          },
+          "startT1"
+        );
+    });
+    return () => mq.revert();
+  });
+  return (
+    <section
+      ref={mainSectionRef}
+      className="px-6 lg:px-20 w-full h-full flex flex-col items-center lg:items-start gap-y-6 lg:gap-y-14 overflow-hidden"
+    >
+      <div
+        ref={headingRef}
+        className="flex flex-col items-end gap-y-1 lg:gap-y-2 w-fit"
+      >
         <Heading
           tagType={IHeadingTags.h2}
           type={IHeadingTypes.heading56}
@@ -28,7 +77,10 @@ const OurTeamBottom = () => {
         <div className="bg-primary h-0.5 w-12 lg:w-[128px]" />
       </div>
       {/* Desktop view */}
-      <div className="hidden lg:flex gap-x-10 w-full h-full items-center justify-between">
+      <div
+        ref={teamDetailDivRef}
+        className="hidden lg:flex gap-x-10 w-full h-full items-center justify-between"
+      >
         {TeamDetails.map((item, index) => {
           return (
             <div key={index} className="flex flex-col w-[224px] h-[300px]">
