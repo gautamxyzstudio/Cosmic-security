@@ -4,10 +4,9 @@ import './globals.css';
 import Header from '@/components/header/Header';
 import Footer from '@/appComponents/footer/Footer';
 
-
-
 const latoMono = Lato({
   variable: '--font-lato-mono',
+  subsets: ['latin'],
   weight: ['400'],
 });
 
@@ -23,12 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={` ${latoMono.className} bg-background antialiased`}
-      >
+      <body className={` ${latoMono.className} bg-background antialiased`}>
         <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

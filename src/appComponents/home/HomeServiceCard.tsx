@@ -14,14 +14,14 @@ import Link from 'next/link';
 export interface IHomeServiceCardProps {
   cardImage: StaticImport | string;
   title: string;
-  customClass: string;
+  customClass?: string;
   description: string;
 }
 
 const HomeServiceCard: React.FC<IHomeServiceCardProps> = ({
   cardImage,
   title,
-  customClass,
+  customClass = ' ',
   description,
 }) => {
   return (

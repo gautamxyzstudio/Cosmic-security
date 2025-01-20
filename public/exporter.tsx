@@ -18,7 +18,6 @@ import MESSAGE_ICON from './message.svg';
 import MOBILE_GUARDING_ICON from './mobileGuarding.svg';
 import ONSITE_GUARDING_ICON from './onSiteGuarding.svg';
 import REMOTE_GUARDING_ICON from './remoteGuarding.svg';
-import ABOUT_ANIMATION from './aboutIllustration.json';
 import CORNER_LEFT from './cornerLeft.png';
 import CORNER_RIGHT from './cornerRight.png';
 import CHOOSE_OUTER from './chooseOuter.svg';
@@ -38,7 +37,7 @@ import PARAMJIT from './paramjit.webp';
 import KUNAL from './kunal.webp';
 import AMRIT from './amrit.webp';
 import JASMINE from './jasmine.webp';
-import HUMBUG from './Hamburger.svg'
+import HUMBUG from './Hamburger.svg';
 import F_CALL from './Call_Footer.svg';
 import F_EMAIL from './Email_Footer.svg';
 
@@ -88,9 +87,4 @@ export const images = {
   KUNAL,
   AMRIT,
   JASMINE,
-};
-
-export const animations = {
-  ABOUT_ANIMATION,
- 
 };
