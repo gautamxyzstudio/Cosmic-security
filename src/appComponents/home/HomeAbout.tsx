@@ -1,16 +1,16 @@
-'use client';
 import Heading, {
   IHeadingTags,
   IHeadingTypes,
 } from '@/components/textTypes/Heading';
 import { STRINGS } from '@/constants/en';
 import React from 'react';
-import { animations } from '../../../public/exporter';
+
 import Description, {
   IDescriptionTypes,
 } from '@/components/textTypes/Description';
 import Button from '@/components/button/Button';
-import Lottie from 'lottie-react';
+
+import HomeAboutUsLottie from '../lotties/HomeAboutUsLottie';
 
 const HomeAbout = () => {
   return (
@@ -23,11 +23,7 @@ const HomeAbout = () => {
       />
       <div className="flex justify-between items-center flex-row mt-6">
         <div className="w-[45%] flex justify-center">
-          <Lottie
-            className="w-[365px] h-[365px]"
-            animationData={animations.ABOUT_ANIMATION}
-            loop={true}
-          />
+          <HomeAboutUsLottie />
         </div>
 
         <div className="w-[45%]">
