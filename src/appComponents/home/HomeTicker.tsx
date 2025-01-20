@@ -1,53 +1,56 @@
 'use client';
-import React, { useRef } from 'react';
-import HomeTickerCard from './HomeTickerCard';
+import React from 'react';
+import { HorizontalTicker } from 'react-infinite-ticker';
+import HomeTickerCard, { IHomeTickerCardProps } from './HomeTickerCard';
 import { icons } from '../../../public/exporter';
-import { useGSAP } from '@gsap/react';
-import { horizontalLoop } from '../../utils/gsap.utils';
 
 const HomeTicker = () => {
-  const divRef = useRef<HTMLDivElement | null>(null);
-  useGSAP(
-    () => {
-      horizontalLoop('.box', { repeat: -1 });
-    },
-    {
-      scope: divRef,
-    }
-  );
-
+  const RenderItem = () => {
+    return (
+      <div className="flex my-[128px] flex-row">
+        {data.map((item, index) => (
+          <HomeTickerCard key={index} {...item} />
+        ))}
+      </div>
+    );
+  };
   return (
-    <div ref={divRef} className="my-[128px]  overflow-hidden relative flex ">
-      <HomeTickerCard
-        name={'Happy clients'}
-        icon={icons.PERSON_ICON}
-        count={'99'}
-        customClass="box"
-      />
-      <div className="w-14 box" />
-      <HomeTickerCard
-        name={'Events served'}
-        icon={icons.CLEANER_ICON}
-        count={'2200'}
-        customClass="box"
-      />
-      <div className="w-14 box" />
-      <HomeTickerCard
-        name={'Years of experience'}
-        icon={icons.EXPERIENCE_ICON}
-        count={'6'}
-        customClass="box"
-      />
-      <div className="w-14 box " />
-      <HomeTickerCard
-        name={'Licensed officer'}
-        icon={icons.LICENSE_ICON}
-        count={'2000'}
-        customClass="box"
-      />
-      <div className="w-16 box " />
+    <div className="w-full">
+      <HorizontalTicker duration={25000}>
+        <RenderItem />
+      </HorizontalTicker>
     </div>
   );
 };
 
 export default HomeTicker;
+
+interface IHomeTickerCardData extends IHomeTickerCardProps {
+  id: number;
+}
+const data: IHomeTickerCardData[] = [
+  {
+    name: 'Happy clients',
+    icon: icons.PERSON_ICON,
+    count: '99',
+    id: 1,
+  },
+  {
+    name: 'Events served',
+    icon: icons.CLEANER_ICON,
+    count: '2200',
+    id: 2,
+  },
+  {
+    name: 'Years of experience',
+    icon: icons.EXPERIENCE_ICON,
+    count: '6',
+    id: 3,
+  },
+  {
+    name: 'Licensed officer',
+    icon: icons.LICENSE_ICON,
+    count: '2000',
+    id: 4,
+  },
+];

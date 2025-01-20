@@ -9,7 +9,7 @@ import Description, {
 } from '@/components/textTypes/Description';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 
-type IHomeTickerCardProps = {
+export type IHomeTickerCardProps = {
   name: string;
   icon: StaticImport;
   count: string;
@@ -24,7 +24,9 @@ const HomeTickerCard: React.FC<IHomeTickerCardProps> = ({
 }) => {
   return (
     <div
-      className={`flex gap-x-4 flex-row items-center p-6 ` + `${customClass}`}
+      className={
+        `flex gap-x-4 w-[291px] flex-row items-center p-6 ` + `${customClass}`
+      }
     >
       <Image alt="person" src={icon} />
       <div>
