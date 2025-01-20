@@ -116,6 +116,12 @@ const OurTeamBottom = () => {
           pagination={{
             clickable: true,
           }}
+          breakpoints={{
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
           className="mySwiper-pagination"
         >
           {TeamDetails.map((team) => {
