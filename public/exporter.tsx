@@ -40,8 +40,15 @@ import JASMINE from './jasmine.webp';
 import HUMBUG from './Hamburger.svg';
 import F_CALL from './Call_Footer.svg';
 import F_EMAIL from './Email_Footer.svg';
+import SERVICES_TOP_BG from './servicesTopBg.webp';
+import REMOTE_GUARDING_SECONDARY_ICON from './remoteGuardingSecondary.svg';
+import ON_SITE_GUARDING_SECONDARY_ICON from './onSiteGuardingSecondary.svg';
+import MOBILE_GUARDING_SECONDARY_ICON from './mobileGuardingSecondary.svg';
 
 export const icons = {
+  REMOTE_GUARDING_SECONDARY_ICON,
+  ON_SITE_GUARDING_SECONDARY_ICON,
+  MOBILE_GUARDING_SECONDARY_ICON,
   CLEANER_ICON,
   EXPERIENCE_ICON,
   LICENSE_ICON,
@@ -86,5 +93,6 @@ export const images = {
   PARAMJIT,
   KUNAL,
   AMRIT,
+  SERVICES_TOP_BG,
   JASMINE,
 };

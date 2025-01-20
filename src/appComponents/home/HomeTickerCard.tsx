@@ -25,7 +25,8 @@ const HomeTickerCard: React.FC<IHomeTickerCardProps> = ({
   return (
     <div
       className={
-        `flex gap-x-4 w-[291px] flex-row items-center p-6 ` + `${customClass}`
+        `flex gap-x-6 w-[251px]  xl:ga-x-16 xl:w-[290px] flex-row items-center p-6 ` +
+        `${customClass}`
       }
     >
       <Image alt="person" src={icon} />
