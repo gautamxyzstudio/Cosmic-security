@@ -10,7 +10,15 @@ type IState = {
   message: string;
 };
 
-const Form = () => {
+interface IFrom {
+  isContactPage?: boolean;
+  customStyle?: string;
+}
+
+const Form: React.FC<IFrom> = ({
+  isContactPage = false,
+  customStyle = ' ',
+}) => {
   const [formData, setFormData] = useState<IState>({
     name: '',
     email: '',
@@ -21,9 +29,17 @@ const Form = () => {
   const updateFormData = (key: string, value: string) => {
     setFormData({ ...formData, [key]: value });
   };
+  const spacing = isContactPage
+    ? `px-4 xl:px-6 gap-y-6 xl:gap-y-14 `
+    : `px-12 gap-y-6  xl:gap-y-12 `;
   return (
-    <div className="bg-black z-[4]  justify-between h-full pt-6  xl:pt-12 flex flex-col  w-full ">
-      <div className="px-6 xl:px-12   flex flex-col gap-y-6  xl:gap-y-12 ">
+    <div
+      className={
+        'bg-black justify-between h-full z-[4] flex flex-col pt-6 xl:pt-12 w-full ' +
+        customStyle
+      }
+    >
+      <div className={spacing + 'flex flex-col'}>
         <TextInput
           value={formData.name}
           onChangeText={(e) => updateFormData('name', e.target.value)}
@@ -45,10 +61,16 @@ const Form = () => {
           placeHolder={'Message'}
         />
       </div>
-      <Button
-        customStyles="py-3 xl:!py-6  !rounded-none "
-        title="Send us Quote"
-      />
+      {isContactPage ? (
+        <div className="px-4 pb-6 mt-10 xl:mt-[112px] xl:px-6 xl:pb-12">
+          <Button customStyles="!py-6 " title="Send us Quote" />
+        </div>
+      ) : (
+        <Button
+          customStyles="xl:!py-6 py-3 !rounded-none "
+          title="Send us Quote"
+        />
+      )}
     </div>
   );
 };

@@ -37,13 +37,13 @@ const Header = () => {
     },
   ];
   return (
-    <header className="pt-4 w-full max-w-screen-2xl z-50 left-1/2 transform -translate-x-1/2 fixed mx-auto flex flex-row justify-between items-center px-6 lg:px-20 ">
+    <header className="pt-5 xl:pt-6 xl:pb-3 w-full max-w-screen-2xl z-50 left-1/2 transform -translate-x-1/2 fixed mx-auto flex flex-row justify-between items-center px-6 lg:px-20 ">
       <Image
         alt="Cosmic Security"
         src={images.LOGO}
         className="w-20 h-6 lg:w-[144px] lg:h-11"
       />
-      <nav className="hidden lg:flex flex-row gap-x-14">
+      <nav className="hidden xl:flex flex-row gap-x-14">
         {navRoutes.map((route) => (
           <Link
             className={
@@ -58,7 +58,7 @@ const Header = () => {
           </Link>
         ))}
       </nav>
-      <Image alt="Hamburger" src={icons.HUMBUG} className="lg:hidden flex" />
+      <Image alt="Hamburger" src={icons.HUMBUG} className="xl:hidden flex" />
     </header>
   );
 };
