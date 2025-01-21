@@ -17,15 +17,15 @@ const ContactFormSection = () => {
         type={IHeadingTypes.heading56}
         customClasses="capitalize"
       />
-      <div className="xl:flex flex-row items-center justify-end relative">
+      <div className="flex flex-col gap-y-10 xl:flex-row items-center justify-end relative">
         <div className="xl:bg-[#484848] xl:py-12 xl:pl-[132px] xl:pr-6 rounded-lg">
-          <div className="flex flex-col gap-x-6 xl:w-[612px]">
+          <div className="flex flex-col gap-y-3 lg:gap-x-6 xl:w-[612px]">
             <Heading
               content={STRINGS.free_contact_us}
               type={IHeadingTypes.heading56}
               tagType={IHeadingTags.h2}
             />
-            <div className="flex flex-col gap-y-2">
+            <div className="flex flex-col gap-y-1 lg:gap-y-2">
               <Description content={STRINGS.contact_des} />
               <Description
                 content={STRINGS.contact_thanks_message}
@@ -34,7 +34,7 @@ const ContactFormSection = () => {
             </div>
           </div>
         </div>
-        <div className="absolute z-10 w-[47%] h-[648px] left-0">
+        <div className="w-full h-[368px] xl:absolute xl:z-10  xl:w-[47%] xl:h-[648px] xl:left-0">
           <Form isContactPage={true} customStyle="rounded-lg" />
         </div>
       </div>

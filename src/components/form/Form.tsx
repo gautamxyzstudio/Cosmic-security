@@ -26,9 +26,9 @@ const Form: React.FC<IFrom> = ({ isContactPage = false, customStyle=' ' }) => {
   const updateFormData = (key: string, value: string) => {
     setFormData({ ...formData, [key]: value });
   };
-  const spacing = isContactPage ? `px-6 gap-y-14 ` : `px-12 gap-y-12 `;
+  const spacing = isContactPage ? `px-4 xl:px-6 gap-y-6 xl:gap-y-14 ` : `px-12 gap-y-12 `;
   return (
-    <div className={"bg-black justify-between h-full flex flex-col pt-12 w-full " + customStyle}>
+    <div className={"bg-black justify-between h-full flex flex-col pt-6 xl:pt-12 w-full " + customStyle}>
       <div className={spacing + "flex flex-col"}>
         <TextInput
           value={formData.name}
@@ -52,8 +52,8 @@ const Form: React.FC<IFrom> = ({ isContactPage = false, customStyle=' ' }) => {
         />
       </div>
       {isContactPage ? (
-        <div className="px-6 pb-12">
-          <Button customStyles="!py-6 !rounded-none " title="Send us Quote" />
+        <div className="px-4 pb-6 mt-10 xl:mt-[112px] xl:px-6 xl:pb-12">
+          <Button customStyles="!py-6 " title="Send us Quote" />
         </div>
       ) : (
         <Button customStyles="!py-6 !rounded-none " title="Send us Quote" />
