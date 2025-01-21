@@ -17,6 +17,7 @@ const HomeWhyChooseUsMobile = () => {
 
   useGSAP(() => {
     gsap.to(imageRef.current, {
+      rotation: 360,
       ease: 'none',
       duration: 10,
       repeat: -1,
@@ -25,7 +26,7 @@ const HomeWhyChooseUsMobile = () => {
   });
   const arraySlides = [...ChooseUsOne, ...ChooseUsTwo];
   return (
-    <section className="overflow-x-hidden ">
+    <section>
       <UnderlinedHeading
         type={IHeadingTypes.heading56}
         tagType={IHeadingTags.h2}
@@ -33,7 +34,7 @@ const HomeWhyChooseUsMobile = () => {
         content="Wy choose us"
       />
       <Description
-        customClasses=" !mt-4 text-center  "
+        customClasses="!mt-4 !mx-4 text-center  "
         content="Lorem Ipsum is simply dummy text of the printing and typesetting industry.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. "
       />
       <div className="mt-6 relative top-0 flex flex-row justify-center items-center left-0">
@@ -49,22 +50,22 @@ const HomeWhyChooseUsMobile = () => {
           className="absolute w-[104px] h-[132px] pt-6 pl-1"
         />
       </div>
-      <div className="mt-6 ml-6 overflow-x-hidden">
+      <div className="mt-6 ml-6">
         <Swiper
           grabCursor={true}
           scrollbar={false}
+          className=" w-full"
           effect="fade"
           updateOnWindowResize={true}
-          cssMode
           spaceBetween={'16vw'}
           slidesPerView={'auto'}
         >
           {arraySlides.map((_, index) => (
             <SwiperSlide
-              key={index}
               className={
                 arraySlides.length - 1 === index ? '!w-min mr-6' : '!w-min'
               }
+              key={index}
             >
               <HomeChooseUsCard icon={_.icon} title={_.title} decs={_.decs} />
             </SwiperSlide>

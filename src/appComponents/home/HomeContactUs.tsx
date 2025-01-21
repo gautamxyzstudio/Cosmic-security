@@ -11,7 +11,7 @@ import Form from '@/components/form/Form';
 
 const HomeContactUs = () => {
   return (
-    <div className=" mx-6 mt-10 xl:mt-0 xl:mx-20">
+    <div className=" mx-6  xl:mx-20">
       <UnderlinedHeading
         tagType={IHeadingTags.h2}
         content={STRINGS.request_information}

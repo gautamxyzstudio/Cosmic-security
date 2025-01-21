@@ -44,6 +44,12 @@ import SERVICES_TOP_BG from './servicesTopBg.webp';
 import REMOTE_GUARDING_SECONDARY_ICON from './remoteGuardingSecondary.svg';
 import ON_SITE_GUARDING_SECONDARY_ICON from './onSiteGuardingSecondary.svg';
 import MOBILE_GUARDING_SECONDARY_ICON from './mobileGuardingSecondary.svg';
+import CHOOSE_US_ONE from './chooseUsOne.webp';
+import CHOOSE_US_TWO from './chooseUsTwo.webp';
+import CHOOSE_US_THREE from './chooseUsThree.webp';
+import CHOOSE_US_FOUR from './chooseUsFour.webp';
+import CHOOSE_US_FIVE from './chooseUsFive.webp';
+import CHOOSE_US_SIX from './chooseUsSix.webp';
 
 export const icons = {
   REMOTE_GUARDING_SECONDARY_ICON,
@@ -95,4 +101,10 @@ export const images = {
   AMRIT,
   SERVICES_TOP_BG,
   JASMINE,
+  CHOOSE_US_ONE,
+  CHOOSE_US_TWO,
+  CHOOSE_US_THREE,
+  CHOOSE_US_FOUR,
+  CHOOSE_US_FIVE,
+  CHOOSE_US_SIX,
 };

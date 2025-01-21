@@ -12,12 +12,14 @@ import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 export interface IHomeChooseUsCardProps {
   customClass?: string;
   icon: StaticImport;
+  descriptionClass?: string;
   title: string;
   decs: string;
 }
 
 const HomeChooseUsCard: React.FC<IHomeChooseUsCardProps> = ({
   customClass = '',
+  descriptionClass = '',
   icon,
   title,
   decs,
@@ -25,7 +27,7 @@ const HomeChooseUsCard: React.FC<IHomeChooseUsCardProps> = ({
   return (
     <div
       className={
-        'bg-black min-h-[256px]  xl:min-h-[324px]  w-[316px] py-6 px-4 ' +
+        'bg-black !h-[200px]  xl:min-h-[324px]  min-w-[280px] py-6 px-4 ' +
         customClass
       }
     >
@@ -37,7 +39,7 @@ const HomeChooseUsCard: React.FC<IHomeChooseUsCardProps> = ({
         content={title}
       />
       <Description
-        customClasses="mt-3"
+        customClasses={'mt-3 !text-sm ' + descriptionClass}
         type={IDescriptionTypes.dec16}
         content={decs}
       />

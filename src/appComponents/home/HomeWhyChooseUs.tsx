@@ -24,6 +24,7 @@ const HomeWhyChooseUs = () => {
     () => {
       gsap.to(imageRef.current, {
         ease: 'none',
+        rotation: 360,
         duration: 10,
         repeat: -1,
         paused: false,

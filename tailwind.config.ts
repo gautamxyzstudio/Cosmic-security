@@ -25,6 +25,7 @@ export default {
         contactLines: 'url(/homeContactlines.webp)',
         ourTeamTopBg: 'url(/OurTeamTopBgImage.webp)',
         servicesTopBg: 'url(/servicesTopBg.webp)',
+        serviceBgMobile: 'url(/serviceBgMobile.webp)',
       },
       colors: {
         background: 'var(--background)',
@@ -70,6 +71,8 @@ export default {
       clipPath: {
         mypolygon: 'polygon(0 18%, 18% 0, 100% 0%, 100% 100%, 0 100%)',
         mypolygonImage: 'polygon(0 45%, 17.5% 0, 100% 0%, 100% 100%, 0 100%)',
+        mypolygonImageMobile:
+          'polygon(0 43%, 18% 0, 100% 0%, 100% 100%, 0 100%)',
       },
     },
   },
