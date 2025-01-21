@@ -63,7 +63,7 @@ const Form: React.FC<IFrom> = ({
       </div>
       {isContactPage ? (
         <div className="px-4 pb-6 mt-10 xl:mt-[112px] xl:px-6 xl:pb-12">
-          <Button customStyles="!py-6 " title="Send us Quote" />
+          <Button customStyles=" xl:!py-6 py-3 " title="Send us Quote" />
         </div>
       ) : (
         <Button

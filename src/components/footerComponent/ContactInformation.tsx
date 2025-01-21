@@ -4,6 +4,8 @@ import { STRINGS } from "@/constants/en";
 import IconWithText from "../iconWithText/IconWithText";
 import { icons } from "../../../public/exporter";
 import Description, { IDescriptionTypes } from "../textTypes/Description";
+import { emailAddress, phoneNumber } from "@/utils/mockdata";
+
 
 const ContactInformation = () => {
   return (
@@ -77,11 +79,11 @@ export const ContactUs = [
   {
     id: 1,
     icons: icons.F_CALL,
-    content: "1-833-926-7642",
+    content: phoneNumber,
   },
   {
     id: 2,
     icons: icons.F_EMAIL,
-    content: "info@thecosmicsecurity.com",
+    content: emailAddress,
   },
 ];

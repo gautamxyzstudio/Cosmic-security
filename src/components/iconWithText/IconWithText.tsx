@@ -6,16 +6,17 @@ interface IIconWithTextProps {
   icon: StaticImport;
   content: string;
   customClasses: string;
-  
+  customIconsStyles?: string;
 }
 const IconWithText: React.FC<IIconWithTextProps> = ({
   customClasses,
   icon,
   content,
+  customIconsStyles = "",
 }) => {
   return (
     <div className={`flex items-center ${customClasses || ""}`}>
-      <Image alt={content} src={icon} />
+      <Image alt={content} src={icon} className={customIconsStyles} />
       <span>{content}</span>
     </div>
   );
