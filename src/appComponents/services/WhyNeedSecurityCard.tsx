@@ -1,16 +1,40 @@
 import Image from 'next/image';
 import React from 'react';
-import { images } from '../../../public/exporter';
-const WhyNeedSecurityCard = () => {
+import Heading, {
+  IHeadingTags,
+  IHeadingTypes,
+} from '@/components/textTypes/Heading';
+import Description, {
+  IDescriptionTypes,
+} from '@/components/textTypes/Description';
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+
+export interface IWhyNeedSecurityCardProps {
+  image: StaticImport;
+  heading: string;
+  description: string;
+}
+const WhyNeedSecurityCard: React.FC<IWhyNeedSecurityCardProps> = ({
+  image,
+  heading,
+  description,
+}) => {
   return (
-    <div className="clip-path-mypolygon  p-3 w-[28%] bg-red-950 h-[516px]">
+    <div className="clip-path-mypolygon  p-3 min-w-[280px]  xl:w-[28%] min-h-[448px]  xl:min-h-[516px] bg-black">
       <Image
         alt="home-top-one  "
-        className="clip-path-mypolygonImage w-[384px] h-[184px]"
+        className="xl:clip-path-mypolygonImage       clip-path-mypolygonImageMobile  w-[384px] h-[184px]"
         width={384}
         height={184}
-        src={images.HOME_TOP_ONE}
+        src={image}
       />
+      <Heading
+        type={IHeadingTypes.heading24}
+        customClasses="mt-4 mb-2"
+        tagType={IHeadingTags.h3}
+        content={heading}
+      />
+      <Description content={description} type={IDescriptionTypes.dec16} />
     </div>
   );
 };

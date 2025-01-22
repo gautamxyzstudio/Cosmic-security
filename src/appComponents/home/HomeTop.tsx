@@ -18,7 +18,7 @@ import { phoneNumber } from '@/utils/mockdata';
 import HomeGuardingView from './HomeGuardingView';
 const HomeTop = () => {
   return (
-    <div className="xl:mx-10   w-full relative rounded-b-[40px]  xl:rounded-b-[80px]  h-[436px] xl:h-full  xl:max-h-[863px] overflow-hidden top-0 left-0">
+    <div className="  w-full relative rounded-b-[40px]  xl:rounded-b-[80px]  h-[436px] xl:h-full  xl:max-h-[863px] overflow-hidden top-0 left-0">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -31,7 +31,6 @@ const HomeTop = () => {
           clickable: true,
         }}
         className="relative w-full h-full  bg-red top-0 left-0"
-        navigation={true}
         modules={[Autoplay]}
       >
         <SwiperSlide>
