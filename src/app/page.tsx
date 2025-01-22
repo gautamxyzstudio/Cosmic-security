@@ -1,12 +1,13 @@
-import HomeTop from '@/appComponents/home/HomeTop';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import HomeAbout from '@/appComponents/home/HomeAbout';
+import HomeTop from '@/appComponents/home/HomeTop';
 import HomeTicker from '@/appComponents/home/HomeTicker';
-import HomeServices from '@/appComponents/home/HomeServices';
+import HomeAbout from '@/appComponents/home/HomeAbout';
 import HomeContactUs from '@/appComponents/home/HomeContactUs';
+import HomeServices from '@/appComponents/home/HomeServices';
 import HomeWhyChooseUs from '@/appComponents/home/HomeWhyChooseUs';
 import HomeWhyChooseUsMobile from '@/appComponents/home/HomeWhyChooseUsMobile';
+
 export default function Home() {
   return (
     <div className="max-w-screen-2xl mb-20 bg-webBg mx-auto">

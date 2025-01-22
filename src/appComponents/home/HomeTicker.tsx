@@ -5,15 +5,20 @@ import HomeTickerCard, { IHomeTickerCardProps } from './HomeTickerCard';
 import { icons } from '../../../public/exporter';
 
 const HomeTicker = () => {
-  const RenderItem = () => {
-    return (
-      <div className="flex my-10  xl:my-[110px] flex-row">
-        {data.map((item, index) => (
-          <HomeTickerCard key={index} {...item} />
-        ))}
-      </div>
-    );
-  };
+  const isClient = typeof window !== 'undefined';
+
+  const RenderItem = () => (
+    <div className="flex my-10 xl:my-[110px] flex-row">
+      {data.map((item, index) => (
+        <HomeTickerCard key={index} {...item} />
+      ))}
+    </div>
+  );
+
+  if (!isClient) {
+    return null;
+  }
+
   return (
     <div className="w-full">
       <HorizontalTicker duration={25000}>
