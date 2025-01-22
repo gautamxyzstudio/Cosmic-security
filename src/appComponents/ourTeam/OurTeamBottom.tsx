@@ -108,7 +108,7 @@ const OurTeamBottom = () => {
           slidesPerView={2}
           spaceBetween={50}
           pagination={{
-            clickable: true,
+            clickable: true, 
           }}
           breakpoints={{
             768: {

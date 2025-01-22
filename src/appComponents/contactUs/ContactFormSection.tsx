@@ -34,7 +34,7 @@ const ContactFormSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-full h-[368px] xl:absolute xl:z-10  xl:w-[47%] xl:h-[648px] xl:left-0">
+        <div className="w-full xl:absolute xl:z-10  xl:w-[47%] xl:left-0">
           <Form isContactPage={true} customStyle="rounded-lg" />
         </div>
       </div>

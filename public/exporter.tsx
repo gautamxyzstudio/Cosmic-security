@@ -54,6 +54,11 @@ import ABOUT_TOP_ILLUSTRATION from './aboutTopIllustration.png';
 import MAP_GIF from './map.gif';
 import MASK_ILLUSTRATION from './maskAbout.webp';
 
+import LOCATION_WHITE from './LocationWhite.svg';
+import LOCATION_DARK from './LocationDark.svg';
+import CROSS from './cross.svg';
+import EMAIL from './Email.svg';
+
 export const icons = {
   REMOTE_GUARDING_SECONDARY_ICON,
   ON_SITE_GUARDING_SECONDARY_ICON,
@@ -75,6 +80,7 @@ export const icons = {
   VAN_ICON,
   ADV_TECH_ICON,
   CALL_SECONDARY_ICON,
+  EMAIL,
   FACEBOOK_ICON,
   LINKEDIN_ICON,
   INSTAGRAM_ICON,
@@ -82,6 +88,9 @@ export const icons = {
   HUMBUG,
   F_CALL,
   F_EMAIL,
+  LOCATION_WHITE,
+  LOCATION_DARK,
+  CROSS,
 };
 
 export const images = {

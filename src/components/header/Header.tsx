@@ -1,14 +1,19 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { icons, images } from "../../../public/exporter";
 import { STRINGS } from "@/constants/en";
 import { route } from "@/constants/route";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import MobileMenuDrawer from "../MobileMenuDrawer/MobileMenuDrawer";
 
 const Header = () => {
   const pathName = usePathname();
+  const [openDrawer, setOpenDrawer] = useState(false);
+  const handleDrawerToggle = () => {
+    setOpenDrawer(!openDrawer);
+  };
   const navRoutes = [
     {
       id: 1,
@@ -58,7 +63,24 @@ const Header = () => {
           </Link>
         ))}
       </nav>
-      <Image alt="Hamburger" src={icons.HUMBUG} className="xl:hidden flex" />
+      <Image
+        alt="Hamburger"
+        src={icons.HUMBUG}
+        className="xl:hidden flex"
+        onClick={handleDrawerToggle}
+      />
+      <MobileMenuDrawer open={openDrawer} onClickCross={handleDrawerToggle}>
+        {navRoutes.map((route) => (
+          <Link
+            key={route.id}
+            className="py-[18px] px-6 text-font-m border-b border-stroke"
+            href={route.link}
+            onClick={handleDrawerToggle}
+          >
+            {route.name}
+          </Link>
+        ))}
+      </MobileMenuDrawer>
     </header>
   );
 };
