@@ -11,6 +11,7 @@ function a11yProps(index: number) {
   };
 }
 interface TabItemProps {
+  id: number
   label: string;
   onClickAction?: () => void; // Add onClick action if needed
 }

@@ -10,6 +10,7 @@ import Description, {
 } from '@/components/textTypes/Description';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Link from 'next/link';
+import { route } from '@/constants/route';
 
 export interface IHomeServiceCardProps {
   cardImage: StaticImport | string;
@@ -26,7 +27,7 @@ const HomeServiceCard: React.FC<IHomeServiceCardProps> = ({
 }) => {
   return (
     <Link
-      href={'/'}
+      href={route.services}
       className={
         'w-[296px] rounded-lg cursor-pointer group h-[380px] overflow-hidden relative ' +
         customClass

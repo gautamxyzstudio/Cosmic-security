@@ -1,36 +1,63 @@
-import React, { useRef } from "react";
+import Image from "next/image";
+import React, { useRef, useState } from "react";
+import { icons } from "../../../public/exporter";
+import Description, { IDescriptionTypes } from "../textTypes/Description";
 
-export const CustomTabsMobile = () => {
+interface ICustomTabsMobileProps {
+  items: {
+    id: number;
+    label: string;
+    onClickAction: () => void;
+  }[];
+}
+
+export const CustomTabsMobile: React.FC<ICustomTabsMobileProps> = ({ items }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const items = Array.from({ length: 10 }, (_, i) => `Item ${i + 1}`);
+  const [selectedId, setSelectedId] = useState(0);
 
-  const scrollToIndex = (index: number) => {
+  const handleItemClick = (index: number) => {
     if (containerRef.current) {
-      const itemWidth = 400; // Height of each item
+      const itemWidth = 212; // Match min-width from className
       const scrollPosition = index * itemWidth;
-      containerRef.current.scrollTo({
-        left: scrollPosition,
-        behavior: "smooth",
-      });
+      containerRef.current.scrollLeft = scrollPosition;
+      setSelectedId(index);
+      
+      // Find and execute the matching item's action
+      const selectedItem = items[index];
+      if (selectedItem) {
+        selectedItem.onClickAction();
+      }
     }
   };
 
   return (
-    <div className="w-full xl:hidden flex">
-      <div
-        ref={containerRef}
-        className="flex flex-row  overflow-x-scroll"
-      >
-        {items.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => scrollToIndex(index)}
-            className="flex items-center gap-x-1 w-full max-w-[212px] h-12 py-4 text-sm"
+    <div
+      ref={containerRef}
+      className="flex flex-row max-w-screen-sm xl:hidden items-center justify-start overflow-x-auto"
+    >
+      {items.map((item, index) => {
+        const isSelected = selectedId === index;
+        return (
+          <div
+            key={item.id}
+            onClick={() => handleItemClick(index)}
+            className={`flex items-center justify-center min-w-[212px] py-4 text-sm ${
+              isSelected ? "bg-buttonGradient" : "bg-transparent"
+            } cursor-pointer transition-all duration-300`}
           >
-            Scroll to {index}
-          </button>
-        ))}
-      </div>
+            <Image
+              src={isSelected ? icons.LOCATION_WHITE : icons.LOCATION_DARK}
+              alt={item.label}
+              className="w-4 h-4 lg:w-6 lg:h-6 mx-2"
+            />
+            <Description
+              content={item.label}
+              type={IDescriptionTypes.dec24}
+              customClasses={isSelected ? "text-white" : "text-disabled"}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };
