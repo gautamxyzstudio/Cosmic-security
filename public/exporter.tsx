@@ -47,6 +47,7 @@ import ON_SITE_GUARDING_SECONDARY_ICON from "./onSiteGuardingSecondary.svg";
 import MOBILE_GUARDING_SECONDARY_ICON from "./mobileGuardingSecondary.svg";
 import LOCATION_WHITE from "./LocationWhite.svg";
 import LOCATION_DARK from "./LocationDark.svg";
+import CROSS from "./cross.svg";
 
 export const icons = {
   REMOTE_GUARDING_SECONDARY_ICON,
@@ -79,6 +80,7 @@ export const icons = {
   F_EMAIL,
   LOCATION_WHITE,
   LOCATION_DARK,
+  CROSS,
 };
 
 export const images = {

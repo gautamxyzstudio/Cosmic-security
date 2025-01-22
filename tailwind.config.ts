@@ -18,7 +18,7 @@ export default {
         guardingGradientThree:
           'linear-gradient(180deg, #FFF -50%, #383838 136.89%)',
         buttonGradient:
-          ' linear-gradient(180deg, #C1272D -13.16%, rgba(56, 56, 56, 0.00) 184.21%);',
+          ' linear-gradient(180deg, #C1272D -13.16%, rgba(56, 56, 56, 0.00) 184.21%)',
         serviceCarGradient:
           ' linear-gradient(0deg, #121212 0.03%, rgba(18, 18, 18, 0.00) 95.88%)',
         webBg: 'url(/webBg.webp)',

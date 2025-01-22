@@ -22,12 +22,16 @@ const theme = createTheme({
         root: {
           color: "#868686",
           width: "25%",
+          height: "80px",
           display: "flex",
           justifyContent: "center",
           maxWidth: "344px",
+          minHeight: "80px",
           padding: "26px 0px ",
           "@media (max-width: 768px)": {
             width: "212px",
+            height: "48px",
+            minHeight: "48px",
             padding: "14px 0px !important",
             "&.MuiButtonBase-root": {
               gap: "4px !important",
@@ -49,9 +53,9 @@ const theme = createTheme({
             fontSize: "20px",
             lineHeight: "28px",
           },
-          ".MuiTab-icon":{
-            marginBottom: "0px"
-          }
+          ".MuiTab-icon": {
+            marginBottom: "0px",
+          },
         },
       },
     },
