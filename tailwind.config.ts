@@ -21,11 +21,15 @@ export default {
           ' linear-gradient(180deg, #C1272D -13.16%, rgba(56, 56, 56, 0.00) 184.21%);',
         serviceCarGradient:
           ' linear-gradient(0deg, #121212 0.03%, rgba(18, 18, 18, 0.00) 95.88%)',
+        aboutBgGradient:
+          ' linear-gradient(90deg, #000 0%, rgba(51, 50, 50, 0.50) 49.66%, rgba(255, 255, 255, 0.00) 100%)',
         webBg: 'url(/webBg.webp)',
         contactLines: 'url(/homeContactlines.webp)',
         ourTeamTopBg: 'url(/OurTeamTopBgImage.webp)',
         servicesTopBg: 'url(/servicesTopBg.webp)',
         serviceBgMobile: 'url(/serviceBgMobile.webp)',
+        aboutBg: 'url(/aboutbg.webp)',
+        aboutMaskBg: 'url(/homeBgTopOne.webp)',
       },
       colors: {
         background: 'var(--background)',

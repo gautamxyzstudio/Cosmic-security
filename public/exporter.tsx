@@ -50,6 +50,9 @@ import CHOOSE_US_THREE from './chooseUsThree.webp';
 import CHOOSE_US_FOUR from './chooseUsFour.webp';
 import CHOOSE_US_FIVE from './chooseUsFive.webp';
 import CHOOSE_US_SIX from './chooseUsSix.webp';
+import ABOUT_TOP_ILLUSTRATION from './aboutTopIllustration.png';
+import MAP_GIF from './map.gif';
+import MASK_ILLUSTRATION from './maskAbout.webp';
 
 export const icons = {
   REMOTE_GUARDING_SECONDARY_ICON,
@@ -106,5 +109,11 @@ export const images = {
   CHOOSE_US_THREE,
   CHOOSE_US_FOUR,
   CHOOSE_US_FIVE,
+  ABOUT_TOP_ILLUSTRATION,
+  MASK_ILLUSTRATION,
   CHOOSE_US_SIX,
+};
+
+export const GIFS = {
+  MAP_GIF,
 };

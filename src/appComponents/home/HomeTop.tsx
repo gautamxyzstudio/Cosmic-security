@@ -31,7 +31,6 @@ const HomeTop = () => {
           clickable: true,
         }}
         className="relative w-full h-full  bg-red top-0 left-0"
-        navigation={true}
         modules={[Autoplay]}
       >
         <SwiperSlide>
