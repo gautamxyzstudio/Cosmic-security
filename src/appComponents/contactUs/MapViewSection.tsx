@@ -4,6 +4,7 @@ import IconWithText from "@/components/iconWithText/IconWithText";
 import React, { useState } from "react";
 import { icons } from "../../../public/exporter";
 import { emailAddress, phoneNumber } from "@/utils/mockdata";
+import { CustomTabsMobile } from "@/components/CustomTabs/CustomTabsMoblie";
 
 const MapViewSection = () => {
   const [selectedTabItemIndex, setSelectedTabItemIndex] = useState(0);
@@ -37,6 +38,7 @@ const MapViewSection = () => {
   return (
     <section className="w-full h-full flex flex-col  justify-center gap-y-6 lg:gap-y-12">
       <CustomTabs tabs={tabs} />
+      <CustomTabsMobile />
       <div className="flex flex-col gap-y-4 lg:gap-y-6">
         <div className="flex flex-col gap-y-3 lg:flex-row lg:justify-between ">
           {contactInfo.map((data, index) => (

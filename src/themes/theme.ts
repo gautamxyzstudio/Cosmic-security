@@ -28,17 +28,6 @@ const theme = createTheme({
           maxWidth: "344px",
           minHeight: "80px",
           padding: "26px 0px ",
-          "@media (max-width: 768px)": {
-            width: "212px",
-            height: "48px",
-            minHeight: "48px",
-            padding: "14px 0px !important",
-            "&.MuiButtonBase-root": {
-              gap: "4px !important",
-              fontSize: "14px !important",
-              lineHeight: "20px !important",
-            },
-          },
           "&.Mui-selected": {
             color: "#ffffff",
             background:
@@ -62,6 +51,9 @@ const theme = createTheme({
     MuiTabs: {
       styleOverrides: {
         root: {
+          "@media (max-width: 768px)": {
+            display: "none",
+          },
           "& .MuiTabs-flexContainer": {
             justifyContent: "space-between",
             alignItems: "center",
