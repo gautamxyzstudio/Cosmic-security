@@ -13,14 +13,14 @@ import { Autoplay, Pagination } from 'swiper/modules';
 
 const AboutTestimonialSection = () => {
   return (
-    <section className="mt-[124px] mx-20">
+    <section className="mt-10 md:mt-14 lg:mt-16 xl:mt-[124px] mx-6 xl:mx-20">
       <UnderlinedHeading
-        customClasses="text-center"
+        customClasses=" xl:text-center"
         tagType={IHeadingTags.h2}
         content="Testimonials"
       />
       <Description
-        customClasses="mt-4 text-center"
+        customClasses=" mt-3 xl:mt-4 xl:text-center"
         content="Lorem ipsum is common with typesetting and printing businesses. The text did not start with the age of digital businesses as it has been used since 1500s or even earlier. "
       />
       <Swiper
@@ -38,7 +38,7 @@ const AboutTestimonialSection = () => {
             spaceBetween: 30,
           },
         }}
-        className="mySwiper-pagination mt-14"
+        className="mySwiper-pagination mt-6 xl:mt-14"
       >
         {testimonialData.map((testimonial, index) => (
           <SwiperSlide className="w-min pt-3 " key={index}>

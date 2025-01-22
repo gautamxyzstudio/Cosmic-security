@@ -17,9 +17,9 @@ export enum IDescriptionTypes {
 const getDescriptionStyles = (type: IDescriptionTypes) => {
   switch (type) {
     case IDescriptionTypes.dec24:
-      return ` font-normal lg:text-2xl text-sm text-white `;
+      return ` font-normal xl:text-2xl text-sm md:text-base lg:text-xl text-white `;
     case IDescriptionTypes.dec20:
-      return ` font-normal lg:text-xl text-sm text-white `;
+      return ` font-normal lg:text-xl text-sm  text-white `;
     case IDescriptionTypes.dec16:
       return ` font-normal text-sm lg:text-base  text-white `;
     case IDescriptionTypes.dec12_static:

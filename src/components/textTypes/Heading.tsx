@@ -36,7 +36,7 @@ const getHeadingStyles = (type: IHeadingTypes) => {
     case IHeadingTypes.heading80:
       return `lg:text-heading-80 text-heading-40  `;
     case IHeadingTypes.heading56:
-      return `lg:text-heading-56 text-2xl `;
+      return `lg:text-heading-56 text-2xl md:text-heading-32  lg:text-4xl `;
     case IHeadingTypes.heading40:
       return `lg:text-heading-40 text-2xl `;
     case IHeadingTypes.heading24:
@@ -67,7 +67,7 @@ const Heading: React.FC<IHeadingProps> = ({
     <Tag
       ref={compRef}
       className={
-        headingStyles + textColor + customClasses + ` ${heeboSans.className} `
+        headingStyles + textColor + customClasses + ` ${heeboSans.className}  `
       }
     >
       {content}

@@ -59,6 +59,12 @@ export default {
             lineHeight: '4rem',
           },
         ],
+        'heading-32': [
+          '2rem',
+          {
+            lineHeight: '2.25rem',
+          },
+        ],
         'heading-40': [
           '2.5rem',
           {
