@@ -52,8 +52,8 @@ const QuickLinks = () => {
             <Link key={link.id} href={link.href}>
               <Description
                 content={link.title}
-                customClasses="!text-lightGrey cursor-pointer"
-                type={IDescriptionTypes.dec16}
+                customClasses=" cursor-pointer"
+                type={IDescriptionTypes.dec16_footer}
               />
             </Link>
           ))}

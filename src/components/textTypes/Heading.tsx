@@ -29,6 +29,7 @@ export enum IHeadingTypes {
   heading24 = 'heading24',
   heading20 = 'heading20',
   heading16 = 'heading16',
+  heading16_footer = 'heading16_footer',
 }
 
 const getHeadingStyles = (type: IHeadingTypes) => {
@@ -42,9 +43,11 @@ const getHeadingStyles = (type: IHeadingTypes) => {
     case IHeadingTypes.heading24:
       return ` lg:text-2xl text-base `;
     case IHeadingTypes.heading20:
-      return `lg:text-xl text-sm`;
+      return `xl:text-xl md:text-base text-sm`;
     case IHeadingTypes.heading16:
-      return `text-text-12 lg:text-base  `;
+      return `text-sm lg:text-base  `;
+    case IHeadingTypes.heading16_footer:
+      return `text-text-12 md:text-base`;
     default:
       return `lg:text-heading-80 `;
   }

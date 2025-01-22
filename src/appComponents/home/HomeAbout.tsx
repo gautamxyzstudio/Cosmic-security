@@ -37,7 +37,7 @@ const HomeAbout = () => {
             content={STRINGS.homeAboutDec}
           />
           <Button
-            customStyles="mt-4 xl:mt-6 !w-[104px] xl:!w-[116px]"
+            customStyles=" py-2 md:py-3 rounded-md mt-4 xl:mt-6 w-[104px] md:w-[112px] xl:w-[124px] h-10 md:h-12 xl:h-14"
             title={STRINGS.view}
           />
         </div>

@@ -2,25 +2,29 @@ import React from "react";
 
 type IButtonProps = {
   customStyles?: string;
-  title?: string;
-  comRef?: React.Ref<HTMLDivElement>;
+  title: string;
+  comRef?: React.Ref<HTMLButtonElement>;
+  onClick?: () => void;
 };
 
 const Button: React.FC<IButtonProps> = ({
   customStyles = " ",
   title,
   comRef,
+  onClick,
 }) => {
   return (
-    <div
+    <button
       ref={comRef}
+      type="submit"
+      onClick={onClick}
       className={
-        "bg-buttonGradient cursor-pointer text-base text-center rounded-md text-white py-[9px] " +
+        "bg-buttonGradient cursor-pointer xl:text-2xl md:text-base text-sm text-center text-white  " +
         customStyles
       }
     >
       {title}
-    </div>
+    </button>
   );
 };
 

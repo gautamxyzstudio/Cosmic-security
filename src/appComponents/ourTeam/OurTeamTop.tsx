@@ -12,7 +12,7 @@ import { useGSAP } from "@gsap/react";
 
 const OurTeamTop = () => {
   const joinUsTextRef = useRef<HTMLParagraphElement | null>(null);
-  const joinUsButtonRef = useRef<HTMLDivElement | null>(null);
+  const joinUsButtonRef = useRef<HTMLButtonElement | null>(null);
   const mainHeadingRef = useRef<HTMLDivElement | null>(null);
   const descriptionTextRef = useRef<HTMLParagraphElement | null>(null);
   useGSAP(() => {
@@ -89,7 +89,7 @@ const OurTeamTop = () => {
             <Button
               comRef={joinUsButtonRef}
               title={STRINGS.register}
-              customStyles="!py-3 px-6 w-[220px] !text-2xl"
+              customStyles=" md:rounded-md py-3 w-[148px] md:w-[220px] h-12 md:h-14 md:h-16"
             />
           </div>
         </div>

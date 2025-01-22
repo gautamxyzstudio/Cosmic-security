@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 type IDescriptionProps = {
   content?: string;
@@ -8,20 +8,23 @@ type IDescriptionProps = {
 };
 
 export enum IDescriptionTypes {
-  dec24 = 'dec24',
-  dec20 = 'dec20',
-  dec16 = 'dec16',
-  dec12_static = 'dec12',
+  dec24 = "dec24",
+  dec20 = "dec20",
+  dec16 = "dec16",
+  dec16_footer = "dec16_footer",
+  dec12_static = "dec12",
 }
 
 const getDescriptionStyles = (type: IDescriptionTypes) => {
   switch (type) {
     case IDescriptionTypes.dec24:
-      return ` font-normal lg:text-2xl text-sm text-white `;
+      return ` font-normal xl:text-2xl lg:text-xl md:text-base text-sm text-white `;
     case IDescriptionTypes.dec20:
-      return ` font-normal lg:text-xl text-sm text-white `;
+      return ` font-normal xl:text-xl lg:text-base  text-sm text-white `;
     case IDescriptionTypes.dec16:
-      return ` font-normal text-sm lg:text-base  text-white `;
+      return ` font-normal md:text-base  text-sm text-white `;
+    case IDescriptionTypes.dec16_footer:
+      return ` font-normal md:text-base text-text-12 text-lightGrey `;
     case IDescriptionTypes.dec12_static:
       return ` font-normal text-text-12  text-white `;
     default:
@@ -30,14 +33,17 @@ const getDescriptionStyles = (type: IDescriptionTypes) => {
 };
 
 const Description: React.FC<IDescriptionProps> = ({
-  customClasses = ' ',
+  customClasses = " ",
   content,
   type = IDescriptionTypes.dec24,
   compRef,
 }) => {
   const styles = getDescriptionStyles(type);
   return (
-    <p ref={compRef} className={styles + customClasses + ' '}>
+    <p
+      ref={compRef}
+      className={styles + customClasses + " "}
+    >
       {content}
     </p>
   );

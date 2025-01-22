@@ -6,10 +6,9 @@ import { icons } from "../../../public/exporter";
 import Description, { IDescriptionTypes } from "../textTypes/Description";
 import { emailAddress, phoneNumber } from "@/utils/mockdata";
 
-
 const ContactInformation = () => {
   return (
-    <div className="flex flex-col gap-y-2 lg:gap-y-4 lg:w-[40%]">
+    <div className="flex flex-col gap-y-2 xl:gap-y-4 w-[57%] md:w-[60%] xl:w-[40%]">
       <Heading
         content={STRINGS.con_us}
         tagType={IHeadingTags.h5}
@@ -30,17 +29,16 @@ const ContactInformation = () => {
           return (
             <div
               key={item.id}
-              className="flex flex-col lg:gap-y-2 w-[180px] lg:w-[240px]"
+              className="flex flex-col lg:gap-y-2 w-[180px] md:w-[416px] xl:w-[240px]"
             >
               <Heading
                 content={item.title}
                 tagType={IHeadingTags.h3}
-                type={IHeadingTypes.heading16}
+                type={IHeadingTypes.heading16_footer}
               />
               <Description
                 content={item.address}
-                customClasses=" !text-lightGrey "
-                type={IDescriptionTypes.dec16}
+                type={IDescriptionTypes.dec16_footer}
               />
             </div>
           );

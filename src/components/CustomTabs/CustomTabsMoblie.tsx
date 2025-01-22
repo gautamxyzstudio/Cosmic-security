@@ -33,7 +33,7 @@ export const CustomTabsMobile: React.FC<ICustomTabsMobileProps> = ({ items }) =>
   return (
     <div
       ref={containerRef}
-      className="flex flex-row max-w-screen-sm xl:hidden items-center justify-start overflow-x-auto"
+      className="flex flex-row max-w-screen-sm lg:hidden items-center justify-start overflow-x-auto"
     >
       {items.map((item, index) => {
         const isSelected = selectedId === index;
