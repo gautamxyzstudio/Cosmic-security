@@ -11,6 +11,7 @@ export enum IDescriptionTypes {
   dec24 = "dec24",
   dec20 = "dec20",
   dec16 = "dec16",
+  dec16_sec = "dec16_sec",
   dec16_footer = "dec16_footer",
   dec12_static = "dec12",
 }
@@ -23,6 +24,8 @@ const getDescriptionStyles = (type: IDescriptionTypes) => {
       return ` font-normal xl:text-xl lg:text-base  text-sm text-white `;
     case IDescriptionTypes.dec16:
       return ` font-normal xl:text-base  md:text-sm text-text-12 text-white `;
+    case IDescriptionTypes.dec16_sec:
+      return ` font-normal md:text-base  text-sm  text-white `;
     case IDescriptionTypes.dec16_footer:
       return ` font-normal md:text-base text-text-12 text-lightGrey `;
     case IDescriptionTypes.dec12_static:

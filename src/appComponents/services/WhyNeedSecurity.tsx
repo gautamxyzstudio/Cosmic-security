@@ -13,7 +13,7 @@ import 'swiper/css';
 
 const WhyNeedSecurity = () => {
   return (
-    <section className="xl:mx-20 mt-10 overflow-hidden xl:mt-[128px]">
+    <section className="xl:mx-20 mt-10 md:mt-14 overflow-hidden xl:mt-[128px]">
       <span className="flex gap-x-1 xl:gap-x-3 flex-row justify-center items-center">
         <Heading
           type={IHeadingTypes.heading56}
