@@ -45,7 +45,7 @@ const HomeContactUs = () => {
             <Description content="info@thecosmicsecurity.com" />
           </div>
         </div>
-        <div className="pb-5 xl:pb-10 pl-5 xl:pl-10 w-full xl:w-[55%] relative h-[370px] top-0 left-0  xl:h-[670px] mt-6 xl:mt-0 bg-contain bg-left-bottom bg-no-repeat bg-contactLines">
+        <div className="pb-5 xl:pb-10 pl-5 xl:pl-10 w-full xl:w-[55%] relative h-[420px] top-0 left-0  xl:h-[670px] mt-6 xl:mt-0 bg-contain bg-left-bottom bg-no-repeat bg-contactLines">
           <Form />
           <div className="bg-black absolute top-[12%] rotate-45 left-3 w-4 h-4  xl:w-[54px] xl:h-[54px]" />
         </div>

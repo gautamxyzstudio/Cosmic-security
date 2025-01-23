@@ -1,18 +1,20 @@
-'use client';
-import { useGSAP } from '@gsap/react';
-import React, { ChangeEventHandler, useRef } from 'react';
-import gsap from 'gsap';
+"use client";
+import { useGSAP } from "@gsap/react";
+import React, { ChangeEventHandler, useRef } from "react";
+import gsap from "gsap";
 type ITextInputProps = {
   value: string;
   isMobile?: boolean;
   placeHolder: string;
   onChangeText?: ChangeEventHandler<HTMLInputElement>;
+  error?: string;
 };
 
 const TextInput: React.FC<ITextInputProps> = ({
   value,
   placeHolder,
   onChangeText,
+  error,
 }) => {
   const divRef = useRef<HTMLHeadingElement | null>(null);
 
@@ -28,7 +30,7 @@ const TextInput: React.FC<ITextInputProps> = ({
       yPercent: -75,
       xPercent: -25,
       duration: 0.2,
-      ease: 'none',
+      ease: "none",
     });
   };
   const onBlur = () => {
@@ -38,7 +40,7 @@ const TextInput: React.FC<ITextInputProps> = ({
         yPercent: 0,
         xPercent: 0,
         duration: 0.2,
-        ease: 'none',
+        ease: "none",
       });
     }
   };
@@ -62,6 +64,7 @@ const TextInput: React.FC<ITextInputProps> = ({
         />
       </div>
       <div className="h-[1px] mt-2 xl:mt-3 bg-background w-full " />
+      {error && <span className=" text-primary text-xs mt-0.5">{error}</span>}
     </div>
   );
 };

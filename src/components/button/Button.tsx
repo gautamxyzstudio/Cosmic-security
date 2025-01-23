@@ -5,6 +5,7 @@ type IButtonProps = {
   title: string;
   comRef?: React.Ref<HTMLButtonElement>;
   onClick?: () => void;
+  disabled?: boolean;
 };
 
 const Button: React.FC<IButtonProps> = ({
@@ -12,6 +13,7 @@ const Button: React.FC<IButtonProps> = ({
   title,
   comRef,
   onClick,
+  disabled = false,
 }) => {
   return (
     <button
@@ -19,9 +21,14 @@ const Button: React.FC<IButtonProps> = ({
       type="submit"
       onClick={onClick}
       className={
-        "bg-buttonGradient cursor-pointer xl:text-2xl md:text-base text-sm text-center text-white  " +
+        ` ${
+          disabled
+            ? "bg-disabled cursor-not-allowed"
+            : "bg-buttonGradient cursor-pointer"
+        } xl:text-2xl md:text-base text-sm text-center text-white ` +
         customStyles
       }
+      disabled={disabled}
     >
       {title}
     </button>
