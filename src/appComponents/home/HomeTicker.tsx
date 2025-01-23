@@ -7,7 +7,7 @@ import { icons } from '../../../public/exporter';
 const HomeTicker = () => {
   const RenderItem = () => {
     return (
-      <div className="flex my-10  xl:my-[110px] flex-row">
+      <div className="flex my-10 md:my-14 xl:my-[110px] flex-row">
         {data.map((item, index) => (
           <HomeTickerCard key={index} {...item} />
         ))}

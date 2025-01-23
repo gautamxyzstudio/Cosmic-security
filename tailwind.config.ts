@@ -71,6 +71,12 @@ export default {
             lineHeight: '1.25rem',
           },
         ],
+        'text-28': [
+          '1.75rem',
+          {
+            lineHeight: '2.25rem',
+          },
+        ],
       },
       clipPath: {
         mypolygon: 'polygon(0 18%, 18% 0, 100% 0%, 100% 100%, 0 100%)',

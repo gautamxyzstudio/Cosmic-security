@@ -1,6 +1,6 @@
 import React from "react";
 
-type IDescriptionProps = {
+export type IDescriptionProps = {
   content?: string;
   customClasses?: string;
   type?: IDescriptionTypes;
@@ -22,7 +22,7 @@ const getDescriptionStyles = (type: IDescriptionTypes) => {
     case IDescriptionTypes.dec20:
       return ` font-normal xl:text-xl lg:text-base  text-sm text-white `;
     case IDescriptionTypes.dec16:
-      return ` font-normal md:text-base  text-sm text-white `;
+      return ` font-normal xl:text-base  md:text-sm text-text-12 text-white `;
     case IDescriptionTypes.dec16_footer:
       return ` font-normal md:text-base text-text-12 text-lightGrey `;
     case IDescriptionTypes.dec12_static:
@@ -40,10 +40,7 @@ const Description: React.FC<IDescriptionProps> = ({
 }) => {
   const styles = getDescriptionStyles(type);
   return (
-    <p
-      ref={compRef}
-      className={styles + customClasses + " "}
-    >
+    <p ref={compRef} className={styles + customClasses + " "}>
       {content}
     </p>
   );

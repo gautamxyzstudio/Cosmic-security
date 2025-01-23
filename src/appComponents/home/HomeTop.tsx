@@ -1,24 +1,24 @@
-'use client';
-import Image from 'next/image';
-import React from 'react';
-import { icons, images } from '../../../public/exporter';
-import 'swiper/css';
-import { Autoplay } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+"use client";
+import Image from "next/image";
+import React from "react";
+import { icons, images } from "../../../public/exporter";
+import "swiper/css";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Heading, {
   IHeadingTags,
   IHeadingTypes,
-} from '@/components/textTypes/Heading';
-import { STRINGS } from '@/constants/en';
+} from "@/components/textTypes/Heading";
+import { STRINGS } from "@/constants/en";
 import Description, {
   IDescriptionTypes,
-} from '@/components/textTypes/Description';
-import HomeTopCircularDiv from './HomeTopCircularDiv';
-import { phoneNumber } from '@/utils/mockdata';
-import HomeGuardingView from './HomeGuardingView';
+} from "@/components/textTypes/Description";
+import HomeTopCircularDiv from "./HomeTopCircularDiv";
+import { phoneNumber } from "@/utils/mockdata";
+import HomeGuardingView from "./HomeGuardingView";
 const HomeTop = () => {
   return (
-    <div className="  w-full relative rounded-b-[40px]  xl:rounded-b-[80px]  h-[436px] xl:h-full  xl:max-h-[863px] overflow-hidden top-0 left-0">
+    <div className="  w-full relative rounded-b-[40px]  xl:rounded-b-[80px]  h-[436px] md:h-[512px] xl:h-full  xl:max-h-[863px] overflow-hidden top-0 left-0">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -61,8 +61,8 @@ const HomeTop = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="absolute pt-[143px]  xl:pt-40 z-[1] bg-[#12121299] top-0 flex-row  flex left-0 h-full w-full">
-        <div className="w-full xl:w-[60%] px-6  xl:pl-20">
+      <div className="absolute pt-[143px] md:pt-[156px]  xl:pt-40 z-[1] bg-[#12121299] top-0 flex-row  flex left-0 h-full w-full">
+        <div className="w-full md:w-[60%] px-6 md:pl-10  xl:pl-20">
           <Description
             content="SERVING IN CANADA SINCE 2018"
             customClasses="!text-primary"
@@ -74,11 +74,7 @@ const HomeTop = () => {
             type={IHeadingTypes.heading80}
           />
 
-          <Description
-            customClasses="mt-3  xl:mt-6"
-            type={IDescriptionTypes.dec24}
-            content={STRINGS.homeDec}
-          />
+          <Description customClasses="mt-3xl:mt-6" content={STRINGS.homeDec} />
           <div className="mt-3  xl:mt-6 gap-x-2 xl:gap-x-4 items-center  flex flex-row  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -99,11 +95,7 @@ const HomeTop = () => {
                 type={IDescriptionTypes.dec16}
                 content={STRINGS.callUsToday}
               />
-              <Heading
-                type={IHeadingTypes.heading24}
-                tagType={IHeadingTags.h6}
-                content={phoneNumber}
-              />
+              <Description content={phoneNumber} customClasses="xl:font-bold" />
             </div>
           </div>
         </div>

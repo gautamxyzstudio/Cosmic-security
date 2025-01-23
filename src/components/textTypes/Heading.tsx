@@ -35,13 +35,13 @@ export enum IHeadingTypes {
 const getHeadingStyles = (type: IHeadingTypes) => {
   switch (type) {
     case IHeadingTypes.heading80:
-      return `lg:text-heading-80 text-heading-40  `;
+      return `xl:text-heading-80 md:text-heading-56 text-heading-40  `;
     case IHeadingTypes.heading56:
-      return `lg:text-heading-56 text-2xl `;
+      return `xl:text-heading-56 xl:font-normal md:text-text-28 text-2xl font-medium `;
     case IHeadingTypes.heading40:
       return `lg:text-heading-40 text-2xl `;
     case IHeadingTypes.heading24:
-      return ` lg:text-2xl text-base `;
+      return ` lg:text-2xl  text-base font-normal xl:font-bold `;
     case IHeadingTypes.heading20:
       return `xl:text-xl md:text-base text-sm`;
     case IHeadingTypes.heading16:

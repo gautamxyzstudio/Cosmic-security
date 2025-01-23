@@ -14,6 +14,7 @@ import UnderlinedHeading from '@/components/underlinedHeading/UnderlinedHeading'
 import Image from 'next/image';
 import Link from 'next/link';
 import { icons } from '../../../public/exporter';
+import { route } from '@/constants/route';
 
 const HomeServices = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
@@ -67,7 +68,7 @@ const HomeServices = () => {
       />
       <div
         ref={divRef}
-        className="xl:flex hidden  flex-row gap-x-8 mt-14 gap-y-12 justify-center  items-center flex-wrap"
+        className="xl:flex hidden flex-row gap-x-8 mt-14 gap-y-12 justify-center  items-center flex-wrap"
       >
         {servicesCardData.map((item) => (
           <HomeServiceCard
@@ -79,11 +80,11 @@ const HomeServices = () => {
           />
         ))}
       </div>
-      <div className="flex xl:hidden mt-8 w-full h-full justify-center  gap-3 flex-wrap flex-row">
+      <div className="flex xl:hidden mt-6 md:mt-8 w-full h-full justify-center  gap-3 md:gap-4 flex-wrap flex-row">
         {servicesCardData.map((item) => (
           <Link
-            href="/"
-            className="rounded-lg overflow-hidden relative top-0 left-0 w-[48%] h-[224px]"
+            href={route.services}
+            className="rounded-lg overflow-hidden relative top-0 left-0 w-[165px] h-[224px]"
             key={item.id}
           >
             <Image
@@ -92,7 +93,7 @@ const HomeServices = () => {
               src={item.cardImage}
             />
             <div className="bg-serviceCarGradient flex flex-row items-end justify-between px-2 py-4  w-full absolute z-[1]  bottom-0 h-[56px]">
-              <Heading content={item.title} type={IHeadingTypes.heading24} />
+              <Heading content={item.title} type={IHeadingTypes.heading24}  />
               <Image
                 className="w-6 h-6"
                 alt="arrow Red"
