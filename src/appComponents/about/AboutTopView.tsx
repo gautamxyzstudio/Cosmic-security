@@ -16,7 +16,7 @@ const AboutTopView = () => {
       <div className="w-full flex flex-row gap-x-6 relative top-0 left-0 px-6  xl:px-20  xl:pt-20 bg-aboutBgGradient h-full">
         <div className="mt-[68px] md:mt-[145px] xl:mt-14 w-[80%] md:w-[50%] ">
           <Heading
-            type={IHeadingTypes.heading56}
+            type={IHeadingTypes.heading56_sec}
             customClasses="!text-primary !font-bold"
             content="Your Trusted Security Partner"
           />

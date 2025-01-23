@@ -42,7 +42,7 @@ const Header = () => {
     },
   ];
   return (
-    <header className="pt-5 xl:pt-6 xl:pb-3 w-full max-w-screen-2xl z-50 left-1/2 transform -translate-x-1/2 fixed mx-auto flex flex-row justify-between items-center px-6 lg:px-20 ">
+    <header className="pt-5 xl:pt-6 xl:pb-3 w-full max-w-screen-2xl z-50 left-1/2 transform -translate-x-1/2 fixed mx-auto flex flex-row justify-between items-center px-6 xl:px-20 ">
       <Image
         alt="Cosmic Security"
         src={images.LOGO}
