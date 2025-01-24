@@ -25,8 +25,8 @@ const AboutTopView = () => {
             customClasses="mt-6"
             content="Cosmic Security, your dedicated ally, offers round-the-clock protection. As your trusted security partner, we prioritize your safety and well-being. "
           />
-          <div className="absolute lg:hidden xl:inline-block bottom-0 left-0">
-            {/* for mobile phone */}
+          <div className="absolute lg:hidden xl:inline-block -bottom-0.5 left-0">
+            {/* for mobile pho  ne */}
             <svg
               className="inline-block md:hidden"
               xmlns="http://www.w3.org/2000/svg"

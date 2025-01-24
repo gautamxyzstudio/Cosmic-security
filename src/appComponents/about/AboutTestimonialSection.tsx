@@ -20,25 +20,33 @@ const AboutTestimonialSection = () => {
         content="Testimonials"
       />
       <Description
-        customClasses=" mt-3 xl:mt-4 xl:text-center"
+        customClasses=" mt-3 md:mt-4 xl:text-center"
         content="Lorem ipsum is common with typesetting and printing businesses. The text did not start with the age of digital businesses as it has been used since 1500s or even earlier. "
       />
       <Swiper
         modules={[Pagination, Autoplay]}
         loop={true}
         autoplay
-        slidesPerView={1}
+        slidesPerView={1.3}
         spaceBetween={20}
         pagination={{
           clickable: true,
         }}
         breakpoints={{
           768: {
+            slidesPerView: 2.3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3.3,
+            spaceBetween: 30,
+          },
+          1280: {
             slidesPerView: 4,
             spaceBetween: 30,
           },
         }}
-        className="mySwiper-pagination mt-6 xl:mt-14"
+        className="mySwiper-pagination mt-6 md:mt-8 lg:mt-10 xl:mt-14"
       >
         {testimonialData.map((testimonial, index) => (
           <SwiperSlide className="w-min pt-3 " key={index}>

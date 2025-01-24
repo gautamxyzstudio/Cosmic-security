@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const AboutBusinessPlanSection = () => {
   return (
-    <section className="md:mt-8 mt-6  lg:mt-10 xl:mt-[100px]  mx-6  xl:mx-20">
+    <section className="mt-10 md:mt-14 lg:mt-16 xl:mt-[100px]  mx-6  xl:mx-20">
       <UnderlinedHeading
         customClasses=" xl:text-center"
         tagType={IHeadingTags.h2}
