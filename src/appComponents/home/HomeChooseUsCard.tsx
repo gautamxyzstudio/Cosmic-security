@@ -27,7 +27,7 @@ const HomeChooseUsCard: React.FC<IHomeChooseUsCardProps> = ({
   return (
     <div
       className={
-        'bg-black h-[200px]  xl:min-h-[324px] w-[342px] py-6 px-4 ' +
+        'bg-black h-[200px]  xl:min-h-[324px] w-[342px] p-4 ' +
         customClass
       }
     >

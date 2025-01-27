@@ -1,19 +1,39 @@
 "use client";
 import CustomTabs from "@/components/CustomTabs/CustomTabs";
 import IconWithText from "@/components/iconWithText/IconWithText";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { icons } from "../../../public/exporter";
 import { emailAddress, phoneNumber } from "@/utils/mockdata";
 import { CustomTabsMobile } from "@/components/CustomTabs/CustomTabsMoblie";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 const MapViewSection = () => {
+  gsap.registerPlugin(ScrollTrigger);
   const [selectedTabItemIndex, setSelectedTabItemIndex] = useState(0);
 
   const tabs = [
-    { id: 1, label: "HEAD OFFICE", onClickAction: () => setSelectedTabItemIndex(0) },
-    { id: 2, label: "ALBERTA OFFICE", onClickAction: () => setSelectedTabItemIndex(1) },
-    { id: 3, label: "KELOWNA OFFICE", onClickAction: () => setSelectedTabItemIndex(2) },
-    { id: 4, label: "SASKATCHEWAN OFFICE", onClickAction: () => setSelectedTabItemIndex(3) },
+    {
+      id: 1,
+      label: "HEAD OFFICE",
+      onClickAction: () => setSelectedTabItemIndex(0),
+    },
+    {
+      id: 2,
+      label: "ALBERTA OFFICE",
+      onClickAction: () => setSelectedTabItemIndex(1),
+    },
+    {
+      id: 3,
+      label: "KELOWNA OFFICE",
+      onClickAction: () => setSelectedTabItemIndex(2),
+    },
+    {
+      id: 4,
+      label: "SASKATCHEWAN OFFICE",
+      onClickAction: () => setSelectedTabItemIndex(3),
+    },
   ];
 
   const contactInfo = [
@@ -28,19 +48,39 @@ const MapViewSection = () => {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.751457889!2d-119.49780852359733!3d49.884693871489695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537df4a8cf723419%3A0x53fc0c94024955fb!2s1638%20Pandosy%20St%20Suite%206%2C%20Kelowna%2C%20BC%20V1Y%201P8%2C%20Canada!5e0!3m2!1sen!2sin!4v1737524361562!5m2!1sen!2sin",
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.807197852225!2d-106.64354794891537!3d52.129851207000584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f790abbe5f67%3A0x75b4257da7825c11!2sCosmic%20Security!5e0!3m2!1sen!2sin!4v1737522782019!5m2!1sen!2sin",
   ];
-
+  const mapTabViewRef = useRef<HTMLDivElement | null>(null);
+  useGSAP(() => {
+    const mq = gsap.matchMedia();
+    mq.add("(min-width: 1280px)", () => {
+      gsap.from(mapTabViewRef.current, {
+        opacity: 0,
+        xPercent: 100,
+        duration: 1.5,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: mapTabViewRef.current,
+          start: "top 94%",
+          end: "top 85%",
+        },
+      });
+    });
+    return () => mq.revert();
+  });
   return (
     <section className="w-full h-full flex flex-col justify-center gap-y-6 lg:gap-y-12">
-      <CustomTabs tabs={tabs} />
+      <div ref={mapTabViewRef} className="w-full">
+        <CustomTabs tabs={tabs} />
+      </div>
+
       <CustomTabsMobile items={tabs} />
       <div className="flex flex-col gap-y-4 lg:gap-y-6">
-        <div className="flex flex-col gap-y-3 lg:flex-row lg:justify-between">
+        <div className="flex flex-col gap-y-3 md:flex-row md:justify-between">
           {contactInfo.map((data, index) => (
             <IconWithText
               key={index}
               icon={data.icon}
               content={data.content}
-              customClasses="gap-x-1 lg:gap-x-2"
+              customClasses="gap-x-1 lg:gap-x-2 text-text-12 md:text-base lg:text-xl"
               customIconsStyles="w-5 h-5 lg:w-6 lg:h-6"
             />
           ))}

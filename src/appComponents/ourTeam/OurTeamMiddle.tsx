@@ -35,19 +35,19 @@ const OurTeamMiddle = () => {
   return (
     <section
       ref={ceoMessageSectionRef}
-      className="px-6 lg:px-20 w-full h-full flex flex-col gap-y-6 lg:flex-row items-center relative overflow-hidden"
+      className="px-6 xl:px-20 w-full h-full flex flex-col gap-y-6 md:flex-row items-center relative overflow-hidden"
     >
       <Image
         alt="Sherry Sidhu, CEO"
         src={images.CEO_IMAGE}
-        className="rounded-xl object-cover w-[342px] h-[232px] lg:w-[961px] lg:h-[660px]"
+        className="rounded-xl object-cover w-[342px] h-[232px] md:w-[478px] md:h-[378px] lg:w-[611px] lg:h-[470px] xl:w-[961px] xl:h-[660px]"
       />
       {/* Desktop view */}
       <div
         ref={messageDivRef}
-        className=" hidden lg:block absolute p-8 right-20 rounded-xl bg-ceoMessageBg w-[611px] h-auto z-10"
+        className=" hidden md:block absolute p-3 right-6 lg:p-6 xl:p-8 xl:right-20 rounded-xl bg-ceoMessageBg w-[385px] lg:w-[500px] xl:w-[611px] h-auto z-10"
       >
-        <div className="flex flex-col gap-y-6">
+        <div className="flex flex-col gap-y-3 lg:gap-y-5 xl:gap-y-6 ">
           <UnderlinedHeading
             tagType={IHeadingTags.h2}
             type={IHeadingTypes.heading56}
@@ -62,7 +62,7 @@ const OurTeamMiddle = () => {
       </div>
       {/* end mobile view */}
       {/* Mobile view */}
-      <div className="flex flex-col gap-y-2 lg:hidden">
+      <div className="flex flex-col gap-y-2 md:hidden">
         <div className="flex flex-col items-center gap-y-3">
           <UnderlinedHeading
             tagType={IHeadingTags.h2}

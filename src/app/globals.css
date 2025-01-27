@@ -78,3 +78,16 @@ body::-webkit-scrollbar {
   height: 6px;
   border-radius: 8px;
 }
+ @media (min-width: 768px) {
+  .swiper-wrapper {
+    padding-bottom: 50px !important;
+  }
+  .mySwiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;  
+  }
+  .mySwiper-pagination .swiper-pagination-bullet-active {
+    width: 14px;
+    height: 8px;
+  }
+}

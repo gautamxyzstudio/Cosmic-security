@@ -47,7 +47,7 @@ const TextInput: React.FC<ITextInputProps> = ({
 
   return (
     <div>
-      <div className="w-full pt-2 xl:pt-5 relative top-0 left-0    rounded-[4px] ">
+      <div className="w-full pt-2 relative top-0 left-0 rounded-[4px] ">
         <h3
           ref={divRef}
           className=" pointer-events-none h-8 inline-block text-base xl:text-2xl text-white  absolute"

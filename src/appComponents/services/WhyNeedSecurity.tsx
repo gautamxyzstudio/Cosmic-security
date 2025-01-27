@@ -38,7 +38,7 @@ const WhyNeedSecurity = () => {
         ))}
       </div>
       <div className="w-full">
-        <div className="mt-6 ml-6 flex lg:hidden ">
+        <div className="mt-6 ml-6 flex xl:hidden ">
           <Swiper
             grabCursor={true}
             scrollbar={false}
@@ -93,7 +93,7 @@ export const whyChooseUsData: IWhyNeedSecurityCardData[] = [
     image: images.CHOOSE_US_THREE,
     heading: 'Powers of Arrest',
     description:
-      'At Cosmic Security, with Advanced Security Licence, our personnel are empowered with the authority and responsibility of arrest, bolstering our commitment to ensuring a secure environment. With a focus on professionalism and adherence to legal protocols, our power of arrest is wielded responsibly to deter and address potential threats, providing an added layer of protection for our clients and their assets.',
+      'At Cosmic Security, with Advanced Security License, our personnel are empowered with the authority and responsibility of arrest, bolstering our commitment to ensuring a secure environment. With a focus on professionalism and adherence to legal protocols, our power of arrest is wielded responsibly to deter and address potential threats, providing an added layer of protection for our clients and their assets.',
   },
   {
     id: 4,

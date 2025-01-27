@@ -129,8 +129,8 @@ const Form: React.FC<IFormProps> = ({
   };
 
   const spacing = isContactPage
-    ? "px-4 xl:px-6 gap-y-6 xl:gap-y-14"
-    : "px-4 md:px-6 xl:px-12 gap-y-6 md:gap-y-10 xl:gap-y-12";
+    ? "px-4 xl:px-6"
+    : "px-4 md:px-6 xl:px-12 ";
 
   const buttonStyles = isContactPage
     ? "rounded-md h-12 md:h-14 xl:h-20 w-full"
@@ -141,7 +141,7 @@ const Form: React.FC<IFormProps> = ({
       <div
         className={`bg-black justify-between h-full z-[4] flex flex-col pt-6 xl:pt-12 w-full ${customStyle}`}
       >
-        <div className={`${spacing} flex flex-col`}>
+        <div className={`${spacing} flex flex-col gap-y-6 md:gap-y-10 xl:gap-y-12`}>
           <TextInput
             value={formData.name}
             onChangeText={(e) => updateFormData("name", e.target.value)}

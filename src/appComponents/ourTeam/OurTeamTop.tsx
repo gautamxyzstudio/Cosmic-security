@@ -47,13 +47,13 @@ const OurTeamTop = () => {
   });
   return (
     <section className="bg-ourTeamTopBg bg-cover bg-center bg-no-repeat w-full h-full">
-      <div className="px-6 lg:px-20 bg-overlayTeamBg">
-        <div className=" pt-[127px]  lg:pt-[244px] pb-20 text-white flex flex-col gap-y-3 lg:gap-y-6 lg:w-[848px] ">
+      <div className="px-6 xl:px-20 bg-overlayTeamBg">
+        <div className=" pt-[127px] md:pt-[106px] lg:pt-[244px] md:pb-14 pb-20 text-white flex flex-col gap-y-3 lg:gap-y-6 lg:w-[848px] ">
           <div className="flex flex-col gap-y-2 lg:gap-y-4 ">
             <div className="overflow-y-hidden">
               <Description
                 content={STRINGS.join_us}
-                customClasses="uppercase !text-primary lg:!text-white"
+                customClasses="uppercase !text-primary md:!text-white"
                 compRef={joinUsTextRef}
               />
             </div>
@@ -80,7 +80,7 @@ const OurTeamTop = () => {
             <div className="overflow-y-hidden">
               <Description
                 content={STRINGS.team_dec}
-                customClasses="!w-[90%] lg:!w-[72%]"
+                customClasses="!w-[90%] md:!w-[72%]"
                 compRef={descriptionTextRef}
               />
             </div>
@@ -89,7 +89,7 @@ const OurTeamTop = () => {
             <Button
               comRef={joinUsButtonRef}
               title={STRINGS.register}
-              customStyles=" md:rounded-md py-3 w-[148px] md:w-[220px] h-12 md:h-14 md:h-16"
+              customStyles="rounded-[4px] md:rounded-md py-3 w-[148px] md:w-[220px] h-12 md:h-14 md:h-16"
             />
           </div>
         </div>

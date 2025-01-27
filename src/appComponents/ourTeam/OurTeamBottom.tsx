@@ -61,7 +61,7 @@ const OurTeamBottom = () => {
   return (
     <section
       ref={mainSectionRef}
-      className="px-6 lg:px-20 w-full h-full flex flex-col items-center lg:items-start gap-y-6 lg:gap-y-14 overflow-hidden"
+      className="px-6 xl:px-20 w-full h-full flex flex-col items-center md:items-start gap-y-6 lg:gap-y-9  xl:gap-y-14 overflow-hidden"
     >
       <div ref={headingRef}>
         <UnderlinedHeading
@@ -73,7 +73,7 @@ const OurTeamBottom = () => {
       {/* Desktop view */}
       <div
         ref={teamDetailDivRef}
-        className="hidden lg:flex gap-x-10 w-full h-full items-center justify-between"
+        className="hidden xl:flex gap-x-10 w-full h-full items-center justify-between"
       >
         {TeamDetails.map((item, index) => {
           return (
@@ -100,7 +100,7 @@ const OurTeamBottom = () => {
       </div>
       {/* End Desktop */}
       {/* Mobile view */}
-      <div className="lg:hidden flex w-full h-full">
+      <div className="xl:hidden flex w-full h-full">
         <Swiper
           modules={[Pagination, Autoplay]}
           loop={true}
@@ -112,25 +112,31 @@ const OurTeamBottom = () => {
           }}
           breakpoints={{
             768: {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3.5,
+              spaceBetween: 50,
             },
           }}
           className="mySwiper-pagination"
         >
           {TeamDetails.map((team) => (
             <SwiperSlide key={team.id}>
-              <div className="flex flex-col w-[180px] h-[240px]">
+              <div className="flex flex-col min-w-[180px] h-[240px] md:min-w-[224px] md:h-[300px] lg:min-w-[260px] lg:h-[319px]">
                 <Image
                   alt={team.name}
                   src={team.path}
-                  className="w-[180px] h-[164px] rounded-t-lg"
+                  width={260}
+                  height={391}
+                  className="w-[180px] h-[164px] md:w-[224px] md:h-[212px] lg:w-[260px] lg:h-[235px] rounded-t-lg object-cover"
                 />
-                <div className="bg-black p-2 rounded-b-lg flex flex-col w-full h-[76px]">
+                <div className="bg-black p-2 rounded-b-lg flex flex-col  h-[76px] md:h-[88px] lg:h-[100px]">
                   <Description
                     customClasses="!text-primary"
                     content={team.name}
-                    type={IDescriptionTypes.dec16}
+                    type={IDescriptionTypes.dec16_sec}
                   />
                   <Description
                     content={team.role}

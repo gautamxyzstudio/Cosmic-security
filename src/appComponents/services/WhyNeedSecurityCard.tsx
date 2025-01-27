@@ -20,12 +20,11 @@ const WhyNeedSecurityCard: React.FC<IWhyNeedSecurityCardProps> = ({
   description,
 }) => {
   return (
-    <div className="clip-path-mypolygon  p-3 min-w-[280px] md:min-w-[350px] md:min-h-[470px] xl:w-[28%] min-h-[448px]  xl:min-h-[516px] bg-black">
+    <div className="clip-path-mypolygon  p-3 min-w-[280px] md:min-w-[350px] xl:w-[28%] bg-black min-h-[448px] md:min-h-[460px] xl:min-h-[516px]">
       <Image
         alt="home-top-one  "
-        className="xl:clip-path-mypolygonImage clip-path-mypolygonImageMobile  w-[384px] h-[184px]"
-        width={384}
-        height={184}
+        className="xl:clip-path-mypolygonImage clip-path-mypolygonImageMobile w-[280px] h-[132px] md:w-[356px] md:h-[148px] xl:w-[384px] xl:h-[184px] "
+      
         src={image}
       />
       <Heading

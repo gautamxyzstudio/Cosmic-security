@@ -27,6 +27,7 @@ const CustomTabs: React.FC<ICustomTabProps> = ({ tabs, ...props }) => {
   };
   return (
     <Tabs
+    
       {...props}
       value={value}
       onChange={handleChange}

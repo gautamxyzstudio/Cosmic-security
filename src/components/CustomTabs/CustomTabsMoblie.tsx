@@ -33,7 +33,7 @@ export const CustomTabsMobile: React.FC<ICustomTabsMobileProps> = ({ items }) =>
   return (
     <div
       ref={containerRef}
-      className="flex flex-row max-w-screen-sm lg:hidden items-center justify-start overflow-x-auto"
+      className="flex flex-row max-w-screen xl:hidden items-center justify-start overflow-x-auto no-scrollbar"
     >
       {items.map((item, index) => {
         const isSelected = selectedId === index;
@@ -41,7 +41,7 @@ export const CustomTabsMobile: React.FC<ICustomTabsMobileProps> = ({ items }) =>
           <div
             key={item.id}
             onClick={() => handleItemClick(index)}
-            className={`flex items-center justify-center min-w-[212px] py-4 text-sm ${
+            className={`flex items-center justify-center min-w-[212px] md:min-w-[250px] lg:min-w-[280px] py-4 text-sm ${
               isSelected ? "bg-buttonGradient" : "bg-transparent"
             } cursor-pointer transition-all duration-300`}
           >
@@ -53,7 +53,7 @@ export const CustomTabsMobile: React.FC<ICustomTabsMobileProps> = ({ items }) =>
             <Description
               content={item.label}
               type={IDescriptionTypes.dec24}
-              customClasses={isSelected ? "text-white" : "text-disabled"}
+              customClasses={isSelected ? "text-white" : "!text-disabled"}
             />
           </div>
         );

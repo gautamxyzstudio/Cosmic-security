@@ -47,7 +47,7 @@ const getHeadingStyles = (type: IHeadingTypes) => {
     case IHeadingTypes.heading40:
       return `lg:text-heading-40 text-2xl `;
     case IHeadingTypes.heading24:
-      return ` lg:text-2xl  text-base font-normal xl:font-bold `;
+      return ` md:text-2xl  text-base font-normal xl:font-bold `;
     case IHeadingTypes.heading20:
       return `xl:text-xl md:text-base text-sm`;
     case IHeadingTypes.heading16:
