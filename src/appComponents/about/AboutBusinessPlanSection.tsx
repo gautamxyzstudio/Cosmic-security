@@ -1,19 +1,64 @@
-import Description from '@/components/textTypes/Description';
-import { IHeadingTags } from '@/components/textTypes/Heading';
-import UnderlinedHeading from '@/components/underlinedHeading/UnderlinedHeading';
-import React from 'react';
-import { GIFS } from '../../../public/exporter';
-import Image from 'next/image';
+"use client";
+import Description from "@/components/textTypes/Description";
+import { IHeadingTags } from "@/components/textTypes/Heading";
+import UnderlinedHeading from "@/components/underlinedHeading/UnderlinedHeading";
+import React, { useRef } from "react";
+import { GIFS } from "../../../public/exporter";
+import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 const AboutBusinessPlanSection = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const BusinessPlanSectionRef = useRef<HTMLDivElement | null>(null);
+  const BusinessPlanHeadingRef = useRef<HTMLDivElement | null>(null);
+  const BusinessPlanDescriptionRef = useRef<HTMLParagraphElement | null>(null);
+  useGSAP(() => {
+    const mq = gsap.matchMedia();
+    mq.add("(min-width: 1280px)", () => {
+      const t1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: BusinessPlanSectionRef.current,
+          start: "top 96%",
+          end: "8% 91%",
+        },
+      });
+      t1.add("startT1")
+        .from(
+          BusinessPlanHeadingRef.current,
+          {
+            opacity: 0,
+            duration: 1.2,
+            yPercent: 100,
+          },
+          "startT1"
+        )
+        .from(
+          BusinessPlanDescriptionRef.current,
+          {
+            opacity: 0,
+            yPercent: 100,
+            duration: 1.2,
+          },
+          "startT1"
+        );
+    });
+    return () => mq.revert();
+  });
   return (
-    <section className="mt-10 md:mt-14 lg:mt-16 xl:mt-[100px]  mx-6  xl:mx-20">
+    <section
+      ref={BusinessPlanSectionRef}
+      className="mt-10 md:mt-14 lg:mt-16 xl:mt-[100px]  mx-6  xl:mx-20"
+    >
       <UnderlinedHeading
         customClasses=" xl:text-center"
         tagType={IHeadingTags.h2}
         content="Our Business Plan"
+        compRef={BusinessPlanHeadingRef}
       />
       <Description
+        compRef={BusinessPlanDescriptionRef}
         customClasses="mt-3  xl:mt-4 xl:text-center"
         content="Lorem ipsum is common with typesetting and printing businesses. The text did not start with the age of digital businesses as it has been used since 1500s or even earlier. "
       />

@@ -10,7 +10,7 @@ import HomeWhyChooseUsMobile from '@/appComponents/home/HomeWhyChooseUsMobile';
 
 export default function Home() {
   return (
-    <div className="max-w-screen-2xl mb-10 md:mb-14 xl:mb-20 bg-webBg mx-auto">
+    <div className="max-w-screen-2xl mb-10 md:mb-14 xl:mb-20 bg-webBg mx-auto overflow-hidden">
       <div className="bg-background overflow-x-hidden">
         <HomeTop />
       </div>
