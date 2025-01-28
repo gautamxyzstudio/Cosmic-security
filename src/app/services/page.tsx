@@ -12,42 +12,37 @@ const Services = () => {
       <div className="hidden md:flex">
         <ServicesTopView />
       </div>
-      <div className="visible  md:hidden">
+      <div className="md:hidden">
         <ServiceTopViewMobile />
         <div className="mx-6 mt-6 flex flex-col gap-y-6">
-          <HomeChooseUsCard
-            icon={icons.ON_SITE_GUARDING_SECONDARY_ICON}
-            customClass="!w-full !min-h-[220px] "
-            title={"On-site Guarding"}
-            descriptionClass="!text-sm"
-            decs={
-              "Cosmic Security redefines security with remote guarding, integrating state-of-the-art CCTV technology for proactive surveillance and immediate response. Your property's protection is our priority, even from a distance."
-            }
-          />
-          <HomeChooseUsCard
-            icon={icons.MOBILE_GUARDING_SECONDARY_ICON}
-            customClass="!w-full !min-h-[220px] "
-            title={"Mobile Guarding"}
-            descriptionClass="!text-sm"
-            decs={
-              "Cosmic Security redefines security with remote guarding, integrating state-of-the-art CCTV technology for proactive surveillance and immediate response. Your property's protection is our priority, even from a distance."
-            }
-          />
-          <HomeChooseUsCard
-            icon={icons.REMOTE_GUARDING_SECONDARY_ICON}
-            customClass="!w-full !min-h-[220px]"
-            title={"Remote Guarding"}
-            descriptionClass="!text-sm"
-            decs={
-              "Cosmic Security redefines security with remote guarding, integrating state-of-the-art CCTV technology for proactive surveillance and immediate response. Your property's protection is our priority, even from a distance."
-            }
-          />
+          {[
+            {
+              icon: icons.ON_SITE_GUARDING_SECONDARY_ICON,
+              title: "On-site Guarding",
+            },
+            {
+              icon: icons.MOBILE_GUARDING_SECONDARY_ICON,
+              title: "Mobile Guarding",
+            },
+            {
+              icon: icons.REMOTE_GUARDING_SECONDARY_ICON,
+              title: "Remote Guarding",
+            },
+          ].map(({ icon, title }, index) => (
+            <HomeChooseUsCard
+              key={index}
+              icon={icon}
+              customClass="!w-full !min-h-[220px] !py-6 clip-path-myPolygonServicesTopCard"
+              title={title}
+              descriptionClass="!text-sm"
+              decs="Cosmic Security redefines security with remote guarding, integrating state-of-the-art CCTV technology for proactive surveillance and immediate response. Your property's protection is our priority, even from a distance."
+            />
+          ))}
         </div>
       </div>
-      <div className="visible xl:hidden">
+      <div className="xl:hidden">
         <ServicesServiceSectionMobile />
       </div>
-      
       <WhyNeedSecurity />
     </div>
   );

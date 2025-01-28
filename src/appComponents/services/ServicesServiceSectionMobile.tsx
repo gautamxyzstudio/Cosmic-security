@@ -4,7 +4,7 @@ import { images } from '../../../public/exporter';
 
 const ServicesServiceSectionMobile = () => {
   return (
-    <section className="px-6 mt-10">
+    <section className="px-6 mt-10 md:pt-14 md:mt-4">
       <div className="flex gap-y-3 flex-col">
         {servicesData.map((service, index) => (
           <ServicesServiceCardMobile

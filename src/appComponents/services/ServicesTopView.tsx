@@ -68,8 +68,8 @@ const ServicesTopView = () => {
   ];
 
   return (
-    <div className="w-full px-6 xl:px-20 h-screen xl:pt-20 bg-no-repeat bg-[length:100%_70%]  xl:bg-[length:100%_85%] bg-servicesTopBg max-h-[824px] xl:max-h-[898px] flex flex-col items-center gap-y-20 xl:gap-y-28">
-      <div className="w-[584px] xl:w-[856px] flex flex-col justify-center items-center text-center gap-y-4 xl:gap-y-6 pt-[190px] lg:pt-[170px] xl:pt-[120px]">
+    <div className="w-full px-6 xl:px-20 h-screen xl:pt-20 bg-no-repeat bg-[length:100%_70%] xl:bg-[length:100%_85%] bg-servicesTopBg max-h-[680px] xl:max-h-[898px] flex flex-col items-center gap-y-20 xl:gap-y-28 relative">
+      <div className="w-[584px] xl:w-[856px] flex flex-col justify-center items-center text-center gap-y-4 xl:gap-y-6 pt-[190px] lg:pt-[170px] xl:pt-[120px] ">
         <div className="overflow-hidden">
           <UnderlinedHeading
             content="Our Services"
@@ -87,13 +87,13 @@ const ServicesTopView = () => {
       </div>
       <div
         ref={ServicesTopCardRef}
-        className="flex flex-row justify-between w-full"
+        className="flex flex-row justify-between w-full absolute -bottom-[3%] px-6 xl:px-20"
       >
         {servicesData.map((service, index) => (
           <HomeChooseUsCard
             key={index}
             icon={service.icon}
-            customClass={`!w-[224px] !min-h-[284px] lg:!w-[300px] xl:!w-[408px] xl:!min-h-[238px] card-${index}`}
+            customClass={`!w-[224px] !min-h-[284px] lg:!w-[300px] xl:!w-[408px] xl:!min-h-[238px] card-${index} !py-6 clip-path-myPolygonServicesTopCard`}
             title={service.title}
             decs={service.description}
           />

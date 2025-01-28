@@ -102,7 +102,7 @@ const Form: React.FC<IFormProps> = ({
 
     try {
       const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-      const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_1;
+      const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
       const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
 
       if (!serviceID || !templateID || !userID) {
@@ -168,7 +168,7 @@ const Form: React.FC<IFormProps> = ({
         </div>
 
         {status && (
-          <div className="px-4 pb-6 xl:px-6 xl:pb-12 w-full">
+          <div className="px-4 py-1 w-full">
             <span className="text-lightGrey text-center text-sm block">
               {status}
             </span>
