@@ -1,13 +1,13 @@
-"use client";
-import Description from "@/components/textTypes/Description";
-import { IHeadingTags } from "@/components/textTypes/Heading";
-import UnderlinedHeading from "@/components/underlinedHeading/UnderlinedHeading";
-import React, { useRef } from "react";
-import { GIFS } from "../../../public/exporter";
-import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+'use client';
+import Description from '@/components/textTypes/Description';
+import { IHeadingTags } from '@/components/textTypes/Heading';
+import UnderlinedHeading from '@/components/underlinedHeading/UnderlinedHeading';
+import React, { useRef } from 'react';
+import { GIFS } from '../../../public/exporter';
+import Image from 'next/image';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
 const AboutBusinessPlanSection = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -16,15 +16,16 @@ const AboutBusinessPlanSection = () => {
   const BusinessPlanDescriptionRef = useRef<HTMLParagraphElement | null>(null);
   useGSAP(() => {
     const mq = gsap.matchMedia();
-    mq.add("(min-width: 1280px)", () => {
+    mq.add('(min-width: 1280px)', () => {
       const t1 = gsap.timeline({
         scrollTrigger: {
           trigger: BusinessPlanSectionRef.current,
-          start: "top 96%",
-          end: "8% 91%",
+          start: 'top 96%',
+
+          end: '8% 91%',
         },
       });
-      t1.add("startT1")
+      t1.add('startT1')
         .from(
           BusinessPlanHeadingRef.current,
           {
@@ -32,7 +33,7 @@ const AboutBusinessPlanSection = () => {
             duration: 1.2,
             yPercent: 100,
           },
-          "startT1"
+          'startT1'
         )
         .from(
           BusinessPlanDescriptionRef.current,
@@ -41,7 +42,7 @@ const AboutBusinessPlanSection = () => {
             yPercent: 100,
             duration: 1.2,
           },
-          "startT1"
+          'startT1'
         );
     });
     return () => mq.revert();

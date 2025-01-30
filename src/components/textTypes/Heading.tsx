@@ -1,6 +1,6 @@
 import { Heebo } from 'next/font/google';
 import React, { JSX } from 'react';
-const heeboSans = Heebo({
+export const heeboSans = Heebo({
   variable: '--font-heebo-mono',
   subsets: ['latin'],
   weight: ['400', '500', '700'],

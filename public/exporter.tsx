@@ -8,9 +8,12 @@ import EXPERIENCE_ICON from './experience_icon.svg';
 import LICENSE_ICON from './license_icon.svg';
 import PERSON_ICON from './person_icon.svg';
 import SERVICE_CARD_ONE from './serviceCardOne.webp';
-import SERVICE_CARD_TWO from './ServiceCardTwo.webp';
-import SERVICE_CARD_THREE from './ServiceCardThree.webp';
-import SERVICE_CARD_FOUR from './ServiceCardFour.webp';
+import SERVICE_CARD_TWO from './serviceCardTwo.webp';
+import SERVICE_CARD_THREE from './serviceCardThree.webp';
+import SERVICE_CARD_FOUR from './serviceCardFour.webp';
+import SERVICE_CARD_FIVE from './serviceCardFive.webp';
+import SERVICE_CARD_SIX from './serviceCardSix.webp';
+import SERVICE_CARD_SEVEN from './serviceCardSeven.webp';
 import ARROW_RED from './arrowRed.svg';
 import HOME_CONTACT_LINE_BG from './homeContactlines.webp';
 import PHONE_ICON from './phone.svg';
@@ -58,6 +61,7 @@ import LOCATION_WHITE from './LocationWhite.svg';
 import LOCATION_DARK from './LocationDark.svg';
 import CROSS from './cross.svg';
 import EMAIL from './Email.svg';
+import SERVICE_LINE_TOP from './servicelinetop.svg';
 
 export const icons = {
   REMOTE_GUARDING_SECONDARY_ICON,
@@ -90,6 +94,7 @@ export const icons = {
   F_EMAIL,
   LOCATION_WHITE,
   LOCATION_DARK,
+  SERVICE_LINE_TOP,
   CROSS,
 };
 
@@ -103,6 +108,9 @@ export const images = {
   SERVICE_CARD_TWO,
   SERVICE_CARD_THREE,
   SERVICE_CARD_FOUR,
+  SERVICE_CARD_FIVE,
+  SERVICE_CARD_SIX,
+  SERVICE_CARD_SEVEN,
   HOME_CONTACT_LINE_BG,
   CHOOSE_OUTER,
   CHOOSE_INNER,
