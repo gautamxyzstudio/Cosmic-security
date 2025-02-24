@@ -1,8 +1,9 @@
-"use client";
-import React, { useState } from "react";
-import TextInput from "../textinput/TextInput";
-import Button from "../button/Button";
-import emailjs from "@emailjs/browser";
+'use client';
+import React, { useState, useRef } from 'react';
+import TextInput from '../textinput/TextInput';
+import Button from '../button/Button';
+import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 type IState = {
   name: string;
@@ -18,40 +19,41 @@ interface IFormProps {
 
 const Form: React.FC<IFormProps> = ({
   isContactPage = false,
-  customStyle = "",
+  customStyle = '',
 }) => {
   const [formData, setFormData] = useState<IState>({
-    name: "",
-    email: "",
-    website: "",
-    message: "",
+    name: '',
+    email: '',
+    website: '',
+    message: '',
   });
-  const [status, setStatus] = useState<string>("");
+  const [status, setStatus] = useState<string>('');
   const [errors, setErrors] = useState<Partial<IState>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   // Validating functions
   const validators = {
     name: (value: string) => {
       const nameRegex = /^[A-Za-z\s]{2,50}$/;
       if (!value.trim() || !nameRegex.test(value)) {
-        return "Name must be 2-50 characters and contain only letters";
+        return 'Name must be 2-50 characters and contain only letters';
       }
-      return "";
+      return '';
     },
     email: (value: string) => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!value.trim() || !emailRegex.test(value)) {
-        return "Invalid email format";
+        return 'Invalid email format';
       }
-      return "";
+      return '';
     },
     message: (value: string) => {
       const messageRegex = /^[\w\s.,!?-]{3,500}$/;
       if (!value.trim() || !messageRegex.test(value)) {
-        return "Message must be between 3 and 500 characters";
+        return 'Message must be between 3 and 500 characters';
       }
-      return "";
+      return '';
     },
   };
 
@@ -72,33 +74,70 @@ const Form: React.FC<IFormProps> = ({
     setFormData((prev) => ({ ...prev, [key]: value }));
     // Clear error when user starts typing
     if (errors[key]) {
-      setErrors((prev) => ({ ...prev, [key]: "" }));
+      setErrors((prev) => ({ ...prev, [key]: '' }));
     }
   };
 
   const clearForm = () => {
     setFormData({
-      name: "",
-      email: "",
-      website: "",
-      message: "",
+      name: '',
+      email: '',
+      website: '',
+      message: '',
     });
   };
 
   const updateStatus = (message: string, duration = 3000) => {
     setStatus(message);
     if (message) {
-      setTimeout(() => setStatus(""), duration);
+      setTimeout(() => setStatus(''), duration);
     }
   };
 
+  // Add verification function
+  const verifyCaptcha = async (token: string) => {
+    try {
+      const response = await fetch('/api/verify-recaptcha', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ token }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      if (data.success) {
+        sendEmail();
+      }
+    } catch {
+      updateStatus('Captcha verification failed. Please try again.');
+      return false;
+    }
+  };
+
+  const handleCaptchaChange = (token: string | null) => {
+    if (token) {
+      verifyCaptcha(token);
+    }
+  };
+
+  // Updated handleSubmit function
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!validateForm()) return;
 
+    recaptchaRef.current?.execute();
+  };
+
+  // Updated sendEmail function
+  const sendEmail = async () => {
     setIsSubmitting(true);
-    setStatus("Sending...");
+    setStatus('Sending...');
 
     try {
       const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -106,7 +145,7 @@ const Form: React.FC<IFormProps> = ({
       const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
 
       if (!serviceID || !templateID || !userID) {
-        throw new Error("Missing email service configuration");
+        throw new Error('Missing email service configuration');
       }
 
       const response = await emailjs.send(
@@ -117,51 +156,52 @@ const Form: React.FC<IFormProps> = ({
       );
 
       if (response.status === 200) {
-        updateStatus("Message sent successfully!");
+        updateStatus('Message sent successfully!');
         clearForm();
       }
     } catch (error) {
-      console.error("EmailJS error:", error);
-      updateStatus("Error sending message. Please try again.");
+      console.error('EmailJS error:', error);
+      updateStatus('Error sending message. Please try again.');
     } finally {
       setIsSubmitting(false);
+      recaptchaRef.current?.reset();
     }
   };
 
-  const spacing = isContactPage
-    ? "px-4 xl:px-6"
-    : "px-4 md:px-6 xl:px-12 ";
+  const spacing = isContactPage ? 'px-4 xl:px-6' : 'px-4 md:px-6 xl:px-12 ';
 
   const buttonStyles = isContactPage
-    ? "rounded-md h-12 md:h-14 xl:h-20 w-full"
-    : "py-3 md:py-4 xl:py-6 w-full h-12 md:h-14 xl:h-20";
+    ? 'rounded-md h-12 md:h-14 xl:h-20 w-full'
+    : 'py-3 md:py-4 xl:py-6 w-full h-12 md:h-14 xl:h-20';
 
   return (
     <form className="w-full h-full" onSubmit={handleSubmit}>
       <div
         className={`bg-black justify-between h-full z-[4] flex flex-col pt-6 xl:pt-12 w-full ${customStyle}`}
       >
-        <div className={`${spacing} flex flex-col gap-y-6 md:gap-y-10 xl:gap-y-12`}>
+        <div
+          className={`${spacing} flex flex-col gap-y-6 md:gap-y-10 xl:gap-y-12`}
+        >
           <TextInput
             value={formData.name}
-            onChangeText={(e) => updateFormData("name", e.target.value)}
+            onChangeText={(e) => updateFormData('name', e.target.value)}
             placeHolder="Name"
             error={errors.name}
           />
           <TextInput
             value={formData.email}
-            onChangeText={(e) => updateFormData("email", e.target.value)}
+            onChangeText={(e) => updateFormData('email', e.target.value)}
             placeHolder="Email"
             error={errors.email}
           />
           <TextInput
             value={formData.website}
-            onChangeText={(e) => updateFormData("website", e.target.value)}
+            onChangeText={(e) => updateFormData('website', e.target.value)}
             placeHolder="Company (optional)"
           />
           <TextInput
             value={formData.message}
-            onChangeText={(e) => updateFormData("message", e.target.value)}
+            onChangeText={(e) => updateFormData('message', e.target.value)}
             placeHolder="Message"
             error={errors.message}
           />
@@ -190,6 +230,14 @@ const Form: React.FC<IFormProps> = ({
             disabled={isSubmitting}
           />
         )}
+      </div>
+      <div className="hidden">
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          size="invisible"
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''}
+          onChange={handleCaptchaChange}
+        />
       </div>
     </form>
   );
