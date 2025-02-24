@@ -14,6 +14,7 @@ import SERVICE_CARD_FOUR from './sCardFour.webp';
 import SERVICE_CARD_FIVE from './sCardFive.webp';
 import SERVICE_CARD_SIX from './sCardSix.webp';
 import SERVICE_CARD_SEVEN from './sCardSeven.webp';
+import SERVICE_CARD_EIGHT from './sCardEight.webp';
 import ARROW_RED from './arrowRed.svg';
 import HOME_CONTACT_LINE_BG from './homeContactlines.webp';
 import PHONE_ICON from './phone.svg';
@@ -111,6 +112,7 @@ export const images = {
   SERVICE_CARD_FIVE,
   SERVICE_CARD_SIX,
   SERVICE_CARD_SEVEN,
+  SERVICE_CARD_EIGHT,
   HOME_CONTACT_LINE_BG,
   CHOOSE_OUTER,
   CHOOSE_INNER,

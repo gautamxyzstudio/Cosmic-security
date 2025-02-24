@@ -52,7 +52,7 @@ const HomeServiceCard: React.FC<IHomeServiceCardProps> = ({
             alt="service card one"
           />
         </div>
-        <div className="mt-3 flex flex-col gap-y-2">
+        <div className="mt-3 flex overflow-y-scroll flex-col gap-y-2">
           <Heading
             type={IHeadingTypes.heading24}
             content={title}

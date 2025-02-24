@@ -1,20 +1,20 @@
-"use client";
-import React, { useRef } from "react";
-import Description from "@/components/textTypes/Description";
+'use client';
+import React, { useRef } from 'react';
+import Description from '@/components/textTypes/Description';
 import Heading, {
   IHeadingTags,
   IHeadingTypes,
-} from "@/components/textTypes/Heading";
-import HomeServiceCard from "./HomeServiceCard";
-import { servicesCardData } from "@/utils/mockdata";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from "gsap";
-import UnderlinedHeading from "@/components/underlinedHeading/UnderlinedHeading";
-import Image from "next/image";
-import Link from "next/link";
-import { icons } from "../../../public/exporter";
-import { route } from "@/constants/route";
+} from '@/components/textTypes/Heading';
+import HomeServiceCard from './HomeServiceCard';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+import UnderlinedHeading from '@/components/underlinedHeading/UnderlinedHeading';
+import Image from 'next/image';
+import Link from 'next/link';
+import { icons } from '../../../public/exporter';
+import { route } from '@/constants/route';
+import { servicesData } from '../services/ServicesServiceSection';
 
 const HomeServices = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
@@ -26,19 +26,19 @@ const HomeServices = () => {
 
   useGSAP(() => {
     const mq = gsap.matchMedia();
-    mq.add("(min-width: 1280px)", () => {
-      const targets = gsap.utils.toArray<HTMLElement>(".serviceCard");
+    mq.add('(min-width: 1280px)', () => {
+      const targets = gsap.utils.toArray<HTMLElement>('.serviceCard');
 
       targets.forEach((element, index) => {
-        gsap.set(element, { rotate: index % 2 === 0 ? "-8deg" : "8deg" });
+        gsap.set(element, { rotate: index % 2 === 0 ? '-8deg' : '8deg' });
       });
 
       gsap.from(divRef.current, {
         xPercent: 50,
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 50%",
-          end: "bottom 95%",
+          start: 'top 50%',
+          end: 'bottom 95%',
           scrub: 1,
         },
       });
@@ -48,8 +48,8 @@ const HomeServices = () => {
           rotate: 0,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 40%",
-            end: "bottom 95%",
+            start: 'top 40%',
+            end: 'bottom 95%',
             scrub: 1,
           },
         });
@@ -59,11 +59,11 @@ const HomeServices = () => {
         yPercent: 100,
         opacity: 0,
         duration: 1.2,
-        ease: "power1.inOut",
+        ease: 'power1.inOut',
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 90%",
-          end: "10% 87%",
+          start: 'top 90%',
+          end: '10% 87%',
         },
       };
 
@@ -95,9 +95,9 @@ const HomeServices = () => {
         ref={divRef}
         className="xl:flex hidden flex-row gap-x-8 mt-14 gap-y-12 justify-center items-center flex-wrap"
       >
-        {servicesCardData.map((item) => (
+        {servicesData.map((item) => (
           <HomeServiceCard
-            key={item.id}
+            key={item.count}
             cardImage={item.cardImage}
             title={item.title}
             description={item.description}
@@ -106,11 +106,11 @@ const HomeServices = () => {
         ))}
       </div>
       <div className="flex xl:hidden mt-6 md:mt-8 w-full h-full justify-center gap-3 md:gap-4 flex-wrap flex-row">
-        {servicesCardData.map((item) => (
+        {servicesData.map((item) => (
           <Link
             href={route.services}
             className="rounded-lg overflow-hidden relative top-0 left-0 w-[165px] h-[224px]"
-            key={item.id}
+            key={item.count}
           >
             <Image
               alt=""
