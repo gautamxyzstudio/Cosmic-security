@@ -5,7 +5,7 @@ import Heading, {
   IHeadingTags,
   IHeadingTypes,
 } from '@/components/textTypes/Heading';
-import { route } from '@/constants/route';
+
 import Link from 'next/link';
 
 const FollowUs = () => {
