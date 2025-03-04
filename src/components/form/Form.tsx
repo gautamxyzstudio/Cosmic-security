@@ -48,6 +48,17 @@ const Form: React.FC<IFormProps> = ({
       }
       return '';
     },
+    website: (value: string) => {
+      // Skip validation if empty since it's optional
+      if (!value.trim()) return '';
+
+      // More permissive regex that allows common company name characters
+      const websiteRegex = /^[A-Za-z0-9\s&.,'-]{0,50}$/;
+      if (!websiteRegex.test(value)) {
+        return "Company name can only contain letters, numbers, spaces, and common symbols (&.,-')";
+      }
+      return '';
+    },
     message: (value: string) => {
       const messageRegex = /^[\w\s.,!?-]{3,500}$/;
       if (!value.trim() || !messageRegex.test(value)) {
@@ -62,6 +73,7 @@ const Form: React.FC<IFormProps> = ({
     const newErrors = {
       name: validators.name(formData.name),
       email: validators.email(formData.email),
+      website: validators.website(formData.website),
       message: validators.message(formData.message),
     };
 
@@ -111,17 +123,19 @@ const Form: React.FC<IFormProps> = ({
 
       const data = await response.json();
       if (data.success) {
-        sendEmail();
+        await sendEmail();
+        return true;
       }
+      return false;
     } catch {
       updateStatus('Captcha verification failed. Please try again.');
       return false;
     }
   };
 
-  const handleCaptchaChange = (token: string | null) => {
+  const handleCaptchaChange = async (token: string | null) => {
     if (token) {
-      verifyCaptcha(token);
+      await verifyCaptcha(token);
     }
   };
 
