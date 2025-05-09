@@ -54,7 +54,7 @@ const AboutTopView = () => {
             <Heading
               type={IHeadingTypes.heading56_sec}
               customClasses="!text-primary !font-bold"
-              content="Your Trusted Security Partner"
+              content="Your Trusted Security Partner "
               compRef={aboutMainHeadingRef}
             />
           </div>
@@ -63,7 +63,7 @@ const AboutTopView = () => {
               compRef={aboutMainDescriptionRef}
               type={IDescriptionTypes.dec24}
               customClasses="mt-6"
-              content="Cosmic Security, your dedicated ally, offers round-the-clock protection. As your trusted security partner, we prioritize your safety and well-being. "
+              content="Cosmic Security is your reliable safety partner, committed to 24/7 protection. Your security and peace of mind are always our top priority.  "
             />
           </div>
 

@@ -68,7 +68,7 @@ const AboutTestimonialSection = () => {
         <Description
           compRef={TestimonialDescriptionRef}
           customClasses=" mt-3 md:mt-4 xl:text-center"
-          content="Lorem ipsum is common with typesetting and printing businesses. The text did not start with the age of digital businesses as it has been used since 1500s or even earlier. "
+          content="Cosmic Security’s business plan focuses on innovation, reliability, and customized protection to meet evolving security needs across every sector.   "
         />
       </div>
       <Swiper

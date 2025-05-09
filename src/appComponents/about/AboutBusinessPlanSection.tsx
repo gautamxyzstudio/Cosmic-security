@@ -61,7 +61,7 @@ const AboutBusinessPlanSection = () => {
       <Description
         compRef={BusinessPlanDescriptionRef}
         customClasses="mt-3  xl:mt-4 xl:text-center"
-        content="Lorem ipsum is common with typesetting and printing businesses. The text did not start with the age of digital businesses as it has been used since 1500s or even earlier. "
+        content="Cosmic Security’s business plan focuses on innovation, reliability, and customized protection to meet evolving security needs across every sector.   "
       />
       <Image
         className="mx-auto mt-6  md:mt-8 lg:mt-10 xl:mt-14"

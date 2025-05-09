@@ -159,34 +159,34 @@ export default HomeWhyChooseUs;
 export const ChooseUsOne: IHomeChooseUsCardProps[] = [
   {
     icon: icons.CLOCK_ICON,
-    title: "Perfection anytime",
-    decs: "We have commitment to delivering flawless services at all times and dedication to providing impeccable security solutions consistently. We offer a high standard of service, reliability, and excellence in safeguarding businesses and events.",
+    title: "Perfectness at all times ",
+    decs: "We ensure perfection in our services at any given time and dedication to always providing perfect security solutions. Perfect service, reliability, and perfection in securing businesses and events are what we offer. ",
   },
   {
     icon: icons.CLOCK_ICON,
-    title: "Emergency help",
-    decs: "At Cosmic Security, we prioritize your safety. Our commitment to the fastest emergency response ensures support is dispatched promptly, providing reassurance in critical situations. Trust in our swift and reliable security services. ",
+    title: "Emergency support",
+    decs: "Your security is our concern at Cosmic Security. Our dedication to the fastest emergency response ensures that assistance is dispatched immediately, with help arriving now of need. Trust our prompt and reliable security solutions.  ",
   },
   {
     icon: icons.ADV_TECH_ICON,
-    title: "Advance technology",
-    decs: "At Cosmic Security, we integrate cutting-edge technology for your safety. Our advanced systems include scanning checkpoints, building access control, CCTV, and metal detectors, ensuring comprehensive security solutions",
+    title: "Cutting-edge technology ",
+    decs: "At Cosmic Security, we implement the newest technology for your safety. State-of-the-art scanning checkpoints, building access control, CCTV, and metal detectors are used by us to implement comprehensive security solutions ",
   },
 ];
 export const ChooseUsTwo: IHomeChooseUsCardProps[] = [
   {
     icon: icons.PHONE_ICON,
     title: "24/7 Support",
-    decs: "Experience peace of mind with Cosmic Security's 24/7 support. Our commitment to your safety never rests. At Cosmic Security, your protection is our priority. We ensure unwavering security vigilance, anytime, anywhere",
+    decs: "Experience the peace of mind with 24/7 support from Cosmic Security. Be sure our commitment to safety operates round the clock. Your safety is our responsibility at Cosmic Security. We render tireless security surveillance, day and night, everywhere ",
   },
   {
     icon: icons.OFFICER_ICON,
     title: "Licensed officer",
-    decs: "Cosmic Security boasts a team of over 2000 active licensed security professionals. Highly experienced and fully trained, our experts ensure top-tier protection for your peace of mind ",
+    decs: "Cosmic Security has more than 2000 active licensed security officers. Our highly trained and experienced professionals provide top-class security for your peace of mind  ",
   },
   {
     icon: icons.ADV_TECH_ICON,
     title: "Our fleet",
-    decs: "Cosmic Security's vigilant fleet ensures round-the-clock protection. With 24/7 patrolling, we safeguard your assets and ensure your comfort. Trust in our commitment to security excellence. Your safety is our constant priority",
+    decs: "Cosmic Security's watchful fleet provides round-the-clock security. Patrols 24/7, we protect your assets and provide you with peace of mind. Trust us with our dedication to security perfection. Your safety is our every moment priority. ",
   },
 ];

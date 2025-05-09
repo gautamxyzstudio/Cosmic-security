@@ -77,43 +77,43 @@ export const whyChooseUsData: IWhyNeedSecurityCardData[] = [
   {
     id: 0,
     image: images.CHOOSE_US_ONE,
-    heading: 'Role of a Security Guard',
+    heading: 'Security Guard Role ',
     description:
-      'Cosmic Security excels in crowd control, offering effective strategies for events, concerts, and public gatherings. Our experienced team employs proactive measures to ensure a secure environment, managing crowds with professionalism and precision. Trust us for expert crowd control services that prioritize safety and enhance the overall experience for all attendees.',
+      'Cosmic Security is a professional crowd controller offering efficient solutions for events, concerts, and public gatherings. Our professionals take proactive measures in ensuring a safe environment, professionally controlling crowds with expertise. Let us take care of your professional crowd control solutions paying attention to safety and delivering a praiseworthy experience to all. ',
   },
   {
     id: 1,
     image: images.CHOOSE_US_TWO,
     heading: 'Crowd Control',
     description:
-      'Cosmic Security excels in crowd control, offering effective strategies for events, concerts, and public gatherings. Our experienced team employs proactive measures to ensure a secure environment, managing crowds with professionalism and precision. Trust us for expert crowd control services that prioritize safety and enhance the overall experience for all attendees.',
+'Cosmic Security specializes in crowd control and provides effective event planning, concerts, and public events. Our professionals utilize effective methods to provide a safe environment, professionally and accurately handling crowds. Trust us for safety-oriented professional crowd control services that maximize the entertainment of everyone.  ',
   },
   {
     id: 2,
     image: images.CHOOSE_US_THREE,
     heading: 'Powers of Arrest',
     description:
-      'At Cosmic Security, with Advanced Security License, our personnel are empowered with the authority and responsibility of arrest, bolstering our commitment to ensuring a secure environment. With a focus on professionalism and adherence to legal protocols, our power of arrest is wielded responsibly to deter and address potential threats, providing an added layer of protection for our clients and their assets.',
+'Through holding Advanced Security License in Cosmic Security, our officers are endowed with arrest powers and arrest rights, thus validating our dedication to provide a safe environment. Through focusing on professionalism and adherence to legal procedures, our arrest power is exercised responsibly in an attempt to deter and rectify future risks, providing further security to clients and their properties. ',
   },
   {
     id: 4,
     image: images.CHOOSE_US_FOUR,
     heading: 'Patrol Techniques',
     description:
-      'Cosmic Security employs advanced patrol techniques to enhance security measures. Our experienced teams are adept at strategic patrolling, utilizing a combination of technology and on-the-ground expertise. From mobile patrols to perimeter checks, our techniques are tailored for comprehensive coverage, ensuring a proactive approach to safeguarding your premises and assets.',
+'Through holding Advanced Security License in Cosmic Security, our officers are endowed with arrest powers and arrest rights, thus validating our dedication to provide a safe environment. Through focusing on professionalism and adherence to legal procedures, our arrest power is exercised responsibly in an attempt to deter and rectify future risks, providing further security to clients and their properties. ',
   },
   {
     id: 5,
     image: images.CHOOSE_US_FIVE,
     heading: 'Use of Force',
     description:
-      'At Cosmic Security, the use of force is a last resort, employed only when necessary to protect lives and property. Our highly trained personnel adhere to strict guidelines, prioritizing de-escalation and conflict resolution. The responsible use of force is a measured response, ensuring the safety and well-being of all parties involved while upholding the highest standards of professionalism and ethics.',
+'Force on Cosmic Security is utilized only as a last resort, only where absolutely necessary for the safety of life and property. Our highly trained staff observe strict guidelines with a priority to de-escalation and conflict resolution. Proper use of force is a measured response with safety and well-being to all concerned and adhering to the highest standards of ethical professional values and integrity. ',
   },
   {
     id: 6,
     image: images.CHOOSE_US_SIX,
     heading: 'First Aid',
     description:
-      'At Cosmic Security, safety is paramount. Our personnel are trained in First Aid with (OFA level 1,2 and 3 training), ensuring a swift and effective response in emergencies. Whether at events, construction sites, or other locations, our commitment to providing a secure environment includes the capability to address medical incidents promptly, prioritizing the well-being of individuals under our care.',
+'Safety is our first priority at Cosmic Security. Our staff are First Aid trained (OFA level 1,2 and 3 trained) to respond quickly and effectively should an emergency occur. From operations to construction sites and other places, our commitment to offering a safe environment encompasses being able to respond to medical emergencies quickly, with the health and safety of people in our care being of utmost importance to us. ',
   },
 ];

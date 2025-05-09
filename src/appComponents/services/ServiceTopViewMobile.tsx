@@ -13,7 +13,7 @@ const ServiceTopViewMobile = () => {
           type={IHeadingTypes.heading80}
           tagType={IHeadingTags.h1}
         />
-        <Description content="Lorem ipsum dolor sit amet consectetur. Sodales volutpat lectus ut elementum semper nibh feugiat. Interdum faucibus maecenas pulvinar malesuada cursus turpis pretium." />
+        <Description content="Cosmic Security provides advanced, tailored solutions including on-site, mobile, and remote guarding to ensure round-the-clock protection. " />
       </div>
     </div>
   );

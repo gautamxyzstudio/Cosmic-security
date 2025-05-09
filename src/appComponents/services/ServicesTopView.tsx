@@ -51,19 +51,19 @@ const ServicesTopView = () => {
       icon: icons.ON_SITE_GUARDING_SECONDARY_ICON,
       title: "On-site Guarding",
       description:
-        "Cosmic Security redefines security with remote guarding, integrating state-of-the-art CCTV technology for proactive surveillance and immediate response. Your property's protection is our priority, even from a distance.",
+"Cosmic Security provides expert, on-site security guards to watch over and protect your property, control access points, prevent crime, and provide a secure environment around the clock for all your security requirements.",
     },
     {
       icon: icons.MOBILE_GUARDING_SECONDARY_ICON,
       title: "Mobile Guarding",
       description:
-        "Cosmic Security redefines security with remote guarding, integrating state-of-the-art CCTV technology for proactive surveillance and immediate response. Your property's protection is our priority, even from a distance.",
+'Our mobile guard service provides flexible, roving patrols that involve instant response times, delivering overall security with real-time monitoring, instant response, and proactive threat notification for your property or business.',
     },
     {
       icon: icons.REMOTE_GUARDING_SECONDARY_ICON,
       title: "Remote Guarding",
       description:
-        "Cosmic Security redefines security with remote guarding, integrating state-of-the-art CCTV technology for proactive surveillance and immediate response. Your property's protection is our priority, even from a distance.",
+"With the most advanced CCTV technology, our remote guarding service provides continuous, real-time monitoring of your property. We give proactive security and quick response to threats, maintaining your security in line from a distance. ",
     },
   ];
 
@@ -81,7 +81,7 @@ const ServicesTopView = () => {
         <div className="overflow-hidden">
           <Description
             compRef={ServicesTopDescriptionRef}
-            content="Lorem ipsum dolor sit amet consectetur. Sodales volutpat lectus ut elementum semper nibh feugiat. Interdum faucibus maecenas pulvinar malesuada cursus turpis pretium."
+            content="Cosmic Security provides advanced, tailored solutions including on-site, mobile, and remote guarding to ensure round-the-clock protection. "
           />
         </div>
       </div>

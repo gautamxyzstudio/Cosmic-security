@@ -203,56 +203,56 @@ export const servicesData = [
     count: 1,
     title: 'Mobile Patrol',
     description:
-      "Cosmic Security's mobile guarding and patrolling service operates around the clock, ensuring the constant security of your sites. Our teams are trained to respond promptly to emergency situations, offering a proactive layer of protection. With agile patrols and a commitment to 24/7 vigilance, trust us for reliable and responsive security services tailored to your requirements. Your peace of mind is our priority at Cosmic Security. Experience the assurance of continuous protection with our mobile security solutions.",
+      "24/7 around-the-clock roving patrol security is offered by Cosmic Security's mobile patrol facility. Our professionals respond to emergencies immediately, providing personalized proactive security based on your requirement with peace of mind at 24/7.",
     cardImage: images.SERVICE_CARD_ONE,
   },
   {
     count: 2,
     title: 'Event Security',
     description:
-      'Cosmic Security specializes in event security, encompassing concerts, music festivals, games, and sports events. Our seasoned guards, supervisors, and smart deployment strategies ensure a seamless and secure experience for every occasion. Trust us to safeguard your events with professionalism and expertise.',
-    cardImage: images.SERVICE_CARD_TWO,
+'We organize all events from concerts to corporate functions with event security services. Your visitors have secure, trouble-free experiences with our professional guards and effective measures so your event stays safe with care and professionalism.',    cardImage: images.SERVICE_CARD_TWO,
   },
   {
     count: 3,
     title: 'Loss Prevention',
     description:
-      'Cosmic Security specializes in loss prevention and retail security, implementing proactive measures to safeguard your assets. Our experienced team is adept at deterring theft and ensuring a secure shopping environment. Trust us for comprehensive loss prevention strategies tailored to the retail industry, offering peace of mind for both businesses and customers.',
+
+'Our loss prevention solutions render retail areas secure. Deterrence policies are applied in preventive measures to render assets secure and provide a secure shopping environment for consumers and businesses.',
     cardImage: images.SERVICE_CARD_THREE,
   },
   {
     count: 4,
-    title: 'Construction Site Security',
+    title: 'Construction Site Protection',
     description:
-      'Cosmic Security provides comprehensive construction site security, ensuring the safety of your project 24/7. Our specialized services include smart access control, vigilant monitoring, and experienced guards, contributing to a secure construction environment. Trust us to protect your construction site with precision and dedication',
+'Cosmic Security provides professional construction site security services like 24/7 monitoring, intelligent access control, and professional guarding services. We secure your project and your site, material, and equipment around the clock.',
     cardImage: images.SERVICE_CARD_FOUR,
   },
   {
     count: 5,
     title: 'Fire Watch',
     description:
-      'At Cosmic Security, our expertise extends to prompt buzzer response, ensuring swift access control, and thorough fire watch services to safeguard against potential risks. Trust us for a proactive approach to security and fire prevention tailored for your peace of mind',
+'Our buzzer response and fire watch protect your site with security and compliance in event of system failure or conditions of higher risk. We possess fire risk observation, points of access, and prompt response through warning treatment to ensure risk and harm are mitigated. ',
     cardImage: images.SERVICE_CARD_FIVE,
   },
   {
     count: 6,
     title: 'CCTV Surveillance',
     description:
-      "Cosmic Security's CCTV Surveillance service operates 24/7, providing vigilant monitoring for enhanced security. Our advanced technology ensures real-time oversight, offering a proactive approach to safeguarding your premises. Trust us for constant, reliable surveillance tailored to your specific needs. Your peace of mind is our priority at Cosmic Security. Experience heightened security with our dedicated CCTV services.",
+'We offer top-of-the-line 24/7 security monitoring to guard your property around the clock. Our security experts utilize advanced camera systems for detection, deterrence, and response—safe business with live alert and quick response.',
     cardImage: images.SERVICE_CARD_SIX,
   },
   {
     count: 7,
     title: 'Concierge Services',
     description:
-      'Cosmic Security extends premium concierge services, combining security and hospitality for a seamless experience. Our dedicated team ensures a welcoming environment while prioritizing safety and security. Trust us to elevate your space with professional and attentive concierge services tailored to your needs',
+'Improve hospitality and security with our expert concierge service. Ideal for office towers, commercial towers, and residential condominiums, our concierge greets visitors, manages access, and provides a secure but inviting environment.',
     cardImage: images.SERVICE_CARD_SEVEN,
   },
   {
     count: 8,
     title: 'Shopping Mall Security',
     description:
-      'Cosmic Security is a trusted partner for shopping mall and store security, ensuring a safe and secure environment for businesses and customers alike. Our vigilant personnel and advanced security technology work seamlessly to deter threats and protect assets. Count on us for comprehensive security solutions tailored to the unique needs of shopping establishments, enhancing the overall safety and experience for everyone',
+'Our specialty is shopping mall and retail security, from single-point-of-contact officers, shoplifting deterrence, to monitoring. Our mission is to provide a safe atmosphere among customers and business owners so they can shop in confidence and enhance the enjoyment of shopping.',
     cardImage: images.SERVICE_CARD_EIGHT,
   },
 ];

@@ -88,7 +88,7 @@ const HomeServices = () => {
         <Description
           compRef={homeServicesContentRef}
           customClasses="xl:mt-10 mt-4 text-center xl:px-[256px]"
-          content="Cosmic Security specializes in tailored security solutions across eight major areas, ensuring comprehensive protection for diverse business needs."
+          content="Cosmic Security is pleased to provide professional, dependable security with our 8 experienced services. Whether your need is business, event, or public facility security—we are your protector of safety—24/7."
         />
       </div>
       <div
