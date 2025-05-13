@@ -130,7 +130,7 @@ const HomeWhyChooseUs = () => {
           <div className="overflow-hidden">
             <Description
               customClasses="mt-6"
-              content="Lorem Ipsum is simply dummy text of the printing and typesetting industry.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. "
+              content="Cosmic Security offers reliable protection through trained professionals, advanced technology, and fast response times. We provide customized security solutions for homes, businesses, and events; keeping people and property safe, 24/7. Trust us for peace of mind that lasts. "
               type={IDescriptionTypes.dec24}
               compRef={chooseContentRef}
             />
