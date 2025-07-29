@@ -54,7 +54,7 @@ export const OfficeAddress = [
   {
     id: 1,
     title: "HEAD OFFICE",
-    address: "701 W Georgia St Suite #1500, Vancouver, BC V7Y 1C6",
+    address: "701 W Georgia St Suite Unit 1500, Vancouver, BC V7Y 1C6",
   },
   {
     id: 2,
