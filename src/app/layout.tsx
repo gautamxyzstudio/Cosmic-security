@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Lato } from 'next/font/google';
 import './globals.css';
-
+import Script from "next/script";
 import Header from '@/components/header/Header';
 import Footer from '@/appComponents/footer/Footer';
 import { MaterialUiThemeProvider } from '@/provider/MaterialUiThemeProvider';
@@ -24,12 +24,52 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${latoMono.className} bg-background antialiased`}>
+      <body className={`${latoMono.className} bg-background antialiased`}>
         <MaterialUiThemeProvider>
           <Header />
           {children}
           <Footer />
         </MaterialUiThemeProvider>
+
+        {/* ZoomInfo Script */}
+        <Script
+          id="zoominfo-obfuscated"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window[(function(_Iax,_kg){
+                var _YyLvM='';
+                for(var _0VwdCo=0;_0VwdCo<_Iax.length;_0VwdCo++){
+                  var _4IBZ=_Iax[_0VwdCo].charCodeAt();
+                  _4IBZ-=_kg;_4IBZ!=_0VwdCo;_4IBZ+=61;_YyLvM==_YyLvM;_kg>6;_4IBZ%=94;_4IBZ+=33;
+                  _YyLvM+=String.fromCharCode(_4IBZ)
+                }
+                return _YyLvM
+              })(atob('cWBnKygjfHotYnwy'), 23)] = 'cb62f005481755120811';
+              
+              var zi = document.createElement('script');
+              zi.type = 'text/javascript';
+              zi.async = true;
+              zi.src = (function(_WCX,_Ab){
+                var _pslOt='';
+                for(var _r6vyLb=0;_r6vyLb<_WCX.length;_r6vyLb++){
+                  var _ZzUt=_WCX[_r6vyLb].charCodeAt();
+                  _ZzUt-=_Ab;_Ab>1;_ZzUt+=61;_pslOt==_pslOt;_ZzUt%=94;_ZzUt!=_r6vyLb;_ZzUt+=33;
+                  _pslOt+=String.fromCharCode(_ZzUt)
+                }
+                return _pslOt
+              })(atob('O0dHQ0ZrYGA9Rl9NPF5GNkU8Q0dGXzZCQGBNPF5HNDpfPUY='), 49);
+              
+              if (document.readyState === 'complete') {
+                document.body.appendChild(zi);
+              } else {
+                window.addEventListener('load', function() {
+                  document.body.appendChild(zi);
+                });
+              }
+            `,
+          }}
+        />
       </body>
     </html>
   );
