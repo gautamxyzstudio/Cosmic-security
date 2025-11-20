@@ -66,11 +66,11 @@ export const OfficeAddress = [
     title: "KELOWNA OFFICE",
     address: "1638 Pandosy Street Suite 6,Kelowna, BC. V1Y 1P7",
   },
-  {
-    id: 4,
-    title: "SASKATCHEWAN OFFICE",
-    address: "1121 College Drive Unit 313,Saskatoon, Saskatchewan. S7N 0W3",
-  },
+  // {
+  //   id: 4,
+  //   title: "SASKATCHEWAN OFFICE",
+  //   address: "1121 College Drive Unit 313,Saskatoon, Saskatchewan. S7N 0W3",
+  // },
 ];
 
 export const ContactUs = [

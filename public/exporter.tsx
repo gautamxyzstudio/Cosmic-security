@@ -55,7 +55,6 @@ import CHOOSE_US_FOUR from './chooseUsFour.webp';
 import CHOOSE_US_FIVE from './chooseUsFive.webp';
 import CHOOSE_US_SIX from './chooseUsSix.webp';
 import ABOUT_TOP_ILLUSTRATION from './aboutTopIllustration.png';
-import MAP_GIF from './map.gif';
 import MASK_ILLUSTRATION from './maskAbout.webp';
 
 import LOCATION_WHITE from './LocationWhite.svg';
@@ -131,8 +130,4 @@ export const images = {
   ABOUT_TOP_ILLUSTRATION,
   MASK_ILLUSTRATION,
   CHOOSE_US_SIX,
-};
-
-export const GIFS = {
-  MAP_GIF,
 };
