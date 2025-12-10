@@ -1,8 +1,20 @@
 "use client";
 import React from "react";
-import { HorizontalTicker } from "react-infinite-ticker";
 import HomeTickerCard, { IHomeTickerCardProps } from "./HomeTickerCard";
 import { icons } from "../../../public/exporter";
+import dynamic from "next/dynamic";
+
+
+interface HorizontalTickerProps {
+  children: React.ReactNode;
+  className?: string;
+  duration?: number;
+}
+
+const HorizontalTicker = dynamic<HorizontalTickerProps>(
+  () => import("react-infinite-ticker").then((mod) => mod.HorizontalTicker),
+  { ssr: false }
+);
 
 const HomeTicker = () => {
   const isClient = typeof window !== "undefined";
