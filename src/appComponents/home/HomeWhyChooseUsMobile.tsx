@@ -10,7 +10,6 @@ import gsap from "gsap";
 import HomeChooseUsCard from "./HomeChooseUsCard";
 import { ChooseUsOne, ChooseUsTwo } from "./HomeWhyChooseUs";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 
 const HomeWhyChooseUsMobile = () => {
   const imageRef = useRef<HTMLImageElement | null>(null);

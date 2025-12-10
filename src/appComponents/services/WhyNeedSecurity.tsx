@@ -3,13 +3,11 @@ import Heading, {
   IHeadingTags,
   IHeadingTypes,
 } from '@/components/textTypes/Heading';
-import React from 'react';
 import WhyNeedSecurityCard, {
   IWhyNeedSecurityCardProps,
 } from './WhyNeedSecurityCard';
 import { images } from '../../../public/exporter';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 
 const WhyNeedSecurity = () => {
   return (

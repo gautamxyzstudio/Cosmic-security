@@ -5,6 +5,9 @@ import Script from "next/script";
 import Header from '@/components/header/Header';
 import Footer from '@/appComponents/footer/Footer';
 import { MaterialUiThemeProvider } from '@/provider/MaterialUiThemeProvider';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const latoMono = Lato({
   variable: '--font-lato-mono',

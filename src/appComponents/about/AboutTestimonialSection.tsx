@@ -5,9 +5,6 @@ import UnderlinedHeading from "@/components/underlinedHeading/UnderlinedHeading"
 import React, { useRef } from "react";
 import AboutTestimonialCard from "./AboutTestimonialCard";
 import { images } from "../../../public/exporter";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import gsap from "gsap";

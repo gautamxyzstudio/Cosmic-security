@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useRef } from "react";
 import { icons, images } from "../../../public/exporter";
-import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Heading, {

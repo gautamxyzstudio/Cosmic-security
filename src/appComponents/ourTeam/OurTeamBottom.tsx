@@ -6,10 +6,6 @@ import { images } from '../../../public/exporter';
 import Description, {
   IDescriptionTypes,
 } from '@/components/textTypes/Description';
-// import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 // import gsap
